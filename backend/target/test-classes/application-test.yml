@@ -1,0 +1,71 @@
+spring:
+  application:
+    name: singtel-network-ondemand-test
+  
+
+  
+  # Zonky embedded PostgreSQL will auto-configure the datasource
+  # No manual datasource configuration needed
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+        default_schema: singtel_app
+    open-in-view: false
+
+  flyway:
+    enabled: false # Disable Flyway for tests, use JPA DDL auto
+
+  sql:
+    init:
+      mode: always
+      schema-locations: classpath:test-schema.sql
+      continue-on-error: false
+  
+  security:
+    jwt:
+      secret: test-secret-key-for-testing-purposes-only-that-is-long-enough-for-hs512-algorithm-requirements-minimum-512-bits-needed
+      expiration: 3600000 # 1 hour
+      refresh-expiration: 86400000 # 24 hours
+
+server:
+  port: 0 # Random port for tests
+
+logging:
+  level:
+    com.singtel.network: DEBUG
+    org.springframework.security: DEBUG
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+    org.springframework.web: DEBUG
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+
+# Test-specific configuration
+app:
+  cors:
+    allowed-origins: "http://localhost:4200,http://localhost:3000"
+    allowed-methods: GET,POST,PUT,DELETE,OPTIONS
+    allowed-headers: "*"
+    allow-credentials: true
+
+  service-orchestrator:
+    base-url: http://localhost:9090
+    timeout: 30000
+    retry-attempts: 3
+
+  network-service-bus:
+    base-url: http://localhost:9091
+    timeout: 15000
+
+# API Documentation (disabled for tests)
+springdoc:
+  api-docs:
+    enabled: false
+  swagger-ui:
+    enabled: false

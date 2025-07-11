@@ -1,0 +1,160 @@
+spring:
+  application:
+    name: singtel-network-ondemand
+  
+  profiles:
+    active: development
+  
+  datasource:
+    url: jdbc:postgresql://localhost:5632/singtel_network_db
+    username: singtel_user
+    password: singtel_password
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: 20
+      minimum-idle: 5
+      connection-timeout: 30000
+      idle-timeout: 600000
+      max-lifetime: 1800000
+  
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+        default_schema: singtel_app
+    open-in-view: false
+  
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+    schemas: singtel_app
+    baseline-on-migrate: true
+    validate-on-migrate: true
+  
+  security:
+    jwt:
+      secret: ${JWT_SECRET:singtel-network-ondemand-super-secret-key-for-development-that-is-long-enough-for-hs512-algorithm-requirements-minimum-512-bits-needed-change-in-production}
+      expiration: 86400000 # 24 hours in milliseconds
+      refresh-expiration: 604800000 # 7 days in milliseconds
+
+server:
+  port: 8088
+  servlet:
+    context-path: /api
+  error:
+    include-message: always
+    include-binding-errors: always
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,prometheus
+  endpoint:
+    health:
+      show-details: when-authorized
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+
+logging:
+  level:
+    com.singtel.network: INFO
+    org.springframework.security: DEBUG
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+
+# API Documentation
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    operationsSorter: method
+  info:
+    title: Singtel Network On-Demand API
+    description: RESTful API for managing network services on-demand
+    version: 1.0.0
+    contact:
+      name: Singtel Development Team
+      email: dev@singtel.com
+
+# Application specific configuration
+app:
+  cors:
+    allowed-origins: 
+      - http://localhost:4200
+      - http://localhost:3000
+    allowed-methods: GET,POST,PUT,DELETE,OPTIONS
+    allowed-headers: "*"
+    allow-credentials: true
+  
+  service-orchestrator:
+    base-url: ${SO_BASE_URL:http://localhost:9090}
+    timeout: 30000
+    retry-attempts: 3
+  
+  network-service-bus:
+    base-url: ${NSB_BASE_URL:http://localhost:9091}
+    timeout: 15000
+
+---
+# Development profile
+spring:
+  config:
+    activate:
+      on-profile: development
+  
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  
+  h2:
+    console:
+      enabled: false
+
+logging:
+  level:
+    com.singtel.network: DEBUG
+    org.springframework.web: DEBUG
+
+---
+# Docker profile
+spring:
+  config:
+    activate:
+      on-profile: docker
+  
+  datasource:
+    url: jdbc:postgresql://postgres:5432/singtel_network_db
+
+---
+# Production profile
+spring:
+  config:
+    activate:
+      on-profile: production
+  
+  jpa:
+    show-sql: false
+  
+  security:
+    jwt:
+      secret: ${JWT_SECRET}
+
+logging:
+  level:
+    com.singtel.network: WARN
+    org.springframework.security: WARN
+    org.hibernate.SQL: WARN
+    org.hibernate.type.descriptor.sql.BasicBinder: WARN

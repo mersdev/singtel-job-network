@@ -1,0 +1,14 @@
+/Users/BAORLIM/playground/singtel-job-network/backend/src/test/java/com/singtel/network/TestConfig.java
+/Users/BAORLIM/playground/singtel-job-network/backend/src/test/java/com/singtel/network/NetworkOnDemandApplicationTests.java
+/Users/BAORLIM/playground/singtel-job-network/backend/src/test/java/com/singtel/network/repository/OrderRepositoryTest.java
+/Users/BAORLIM/playground/singtel-job-network/backend/src/test/java/com/singtel/network/service/OrderServiceTest.java
+/Users/BAORLIM/playground/singtel-job-network/backend/src/test/java/com/singtel/network/repository/UserRepositoryTest.java
+/Users/BAORLIM/playground/singtel-job-network/backend/src/test/java/com/singtel/network/repository/ServiceRepositoryTest.java
+/Users/BAORLIM/playground/singtel-job-network/backend/src/test/java/com/singtel/network/controller/ServiceCatalogControllerTest.java
+/Users/BAORLIM/playground/singtel-job-network/backend/src/test/java/com/singtel/network/service/ServiceCatalogServiceTest.java
+/Users/BAORLIM/playground/singtel-job-network/backend/src/test/java/com/singtel/network/controller/OrderControllerTest.java
+/Users/BAORLIM/playground/singtel-job-network/backend/src/test/java/com/singtel/network/controller/AuthControllerTestConfig.java
+/Users/BAORLIM/playground/singtel-job-network/backend/src/test/java/com/singtel/network/controller/AuthControllerTest.java
+/Users/BAORLIM/playground/singtel-job-network/backend/src/test/java/com/singtel/network/service/AuthServiceTest.java
+/Users/BAORLIM/playground/singtel-job-network/backend/src/test/java/com/singtel/network/entity/OrderTest.java
+/Users/BAORLIM/playground/singtel-job-network/backend/src/test/java/com/singtel/network/entity/ServiceTest.java

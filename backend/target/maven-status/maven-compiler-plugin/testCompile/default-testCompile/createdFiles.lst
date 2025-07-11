@@ -1,0 +1,14 @@
+com/singtel/network/controller/AuthControllerTestConfig.class
+com/singtel/network/service/OrderServiceTest.class
+com/singtel/network/repository/ServiceRepositoryTest.class
+com/singtel/network/entity/ServiceTest.class
+com/singtel/network/entity/OrderTest.class
+com/singtel/network/service/AuthServiceTest.class
+com/singtel/network/NetworkOnDemandApplicationTests.class
+com/singtel/network/TestConfig.class
+com/singtel/network/repository/OrderRepositoryTest.class
+com/singtel/network/controller/OrderControllerTest.class
+com/singtel/network/controller/ServiceCatalogControllerTest.class
+com/singtel/network/repository/UserRepositoryTest.class
+com/singtel/network/controller/AuthControllerTest.class
+com/singtel/network/service/ServiceCatalogServiceTest.class

@@ -1,0 +1,116 @@
+version: '3'
+
+vars:
+  DB_HOST: localhost
+  DB_PORT: 5632
+  DB_NAME: singtel_network_db
+  DB_USER: singtel_user
+  DB_PASSWORD: singtel_password
+
+
+tasks:
+  # Database tasks
+  db:setup:
+    desc: Setup PostgreSQL database and user
+    cmds:
+      - |
+        podman run --name singtel-postgres -d \
+          -e POSTGRES_DB={{.DB_NAME}} \
+          -e POSTGRES_USER={{.DB_USER}} \
+          -e POSTGRES_PASSWORD={{.DB_PASSWORD}} \
+          -p {{.DB_PORT}}:5432 \
+          postgres:15-alpine
+      - sleep 5
+      - echo "Database setup complete"
+
+  db:stop:
+    desc: Stop PostgreSQL database container
+    cmds:
+      - podman stop singtel-postgres || true
+      - podman rm singtel-postgres || true
+
+  db:restart:
+    desc: Restart PostgreSQL database
+    cmds:
+      - task: db:stop
+      - task: db:setup
+
+  db:migrate:
+    desc: Run database migrations
+    dir: backend
+    cmds:
+      - ./mvnw flyway:migrate -Dflyway.url=jdbc:postgresql://{{.DB_HOST}}:{{.DB_PORT}}/{{.DB_NAME}} -Dflyway.user={{.DB_USER}} -Dflyway.password={{.DB_PASSWORD}}
+
+  db:clean:
+    desc: Clean database (drop all tables)
+    dir: backend
+    cmds:
+      - ./mvnw flyway:clean -Dflyway.url=jdbc:postgresql://{{.DB_HOST}}:{{.DB_PORT}}/{{.DB_NAME}} -Dflyway.user={{.DB_USER}} -Dflyway.password={{.DB_PASSWORD}}
+
+  db:info:
+    desc: Show database migration info
+    dir: backend
+    cmds:
+      - ./mvnw flyway:info -Dflyway.url=jdbc:postgresql://{{.DB_HOST}}:{{.DB_PORT}}/{{.DB_NAME}} -Dflyway.user={{.DB_USER}} -Dflyway.password={{.DB_PASSWORD}}
+
+  db:reset:
+    desc: Reset database (clean and migrate)
+    cmds:
+      - task: db:clean
+      - task: db:migrate
+
+  db:start:
+    desc: Start PostgreSQL database container
+    cmds:
+      - podman start singtel-postgres
+    status:
+      - podman ps | grep singtel-postgres
+
+  db:logs:
+    desc: Show PostgreSQL database logs
+    cmds:
+      - podman logs -f singtel-postgres
+
+  db:connect:
+    desc: Connect to database using psql
+    cmds:
+      - podman exec -it singtel-postgres psql -U {{.DB_USER}} -d {{.DB_NAME}}
+
+
+
+  dev:
+    desc: Start development environment
+    cmds:
+      - task: db:setup
+      - echo "Starting backend and frontend..."
+      - echo "Run 'task backend:run' in one terminal"
+      - echo "Run 'task frontend:run' in another terminal"
+
+  clean:
+    desc: Clean all build artifacts
+    cmds:
+      - task: db:stop
+      - rm -rf {{.BACKEND_DIR}}/target
+      - rm -rf {{.FRONTEND_DIR}}/dist
+      - rm -rf {{.FRONTEND_DIR}}/node_modules
+
+  # Podman tasks
+  podman:build:
+    desc: Build Podman images
+    cmds:
+      - podman-compose build
+
+  podman:up:
+    desc: Start all services with Podman Compose
+    cmds:
+      - podman-compose up -d
+
+  podman:down:
+    desc: Stop all services
+    cmds:
+      - podman-compose down
+
+  podman:logs:
+    desc: Show logs from all services
+    cmds:
+      - podman-compose logs -f

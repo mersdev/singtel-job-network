@@ -1,0 +1,2724 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.singtel.network.NetworkOnDemandApplicationTests" time="8.77" tests="8" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="17"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/BAORLIM/playground/singtel-job-network/backend/target/test-classes:/Users/BAORLIM/playground/singtel-job-network/backend/target/classes:/Users/BAORLIM/.m2/repository/org/springframework/boot/spring-boot-starter-web/3.2.0/spring-boot-starter-web-3.2.0.jar:/Users/BAORLIM/.m2/repository/org/springframework/boot/spring-boot-starter/3.2.0/spring-boot-starter-3.2.0.jar:/Users/BAORLIM/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.2.0/spring-boot-starter-logging-3.2.0.jar:/Users/BAORLIM/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.21.1/log4j-to-slf4j-2.21.1.jar:/Users/BAORLIM/.m2/repository/org/apache/logging/log4j/log4j-api/2.21.1/log4j-api-2.21.1.jar:/Users/BAORLIM/.m2/repository/org/slf4j/jul-to-slf4j/2.0.9/jul-to-slf4j-2.0.9.jar:/Users/BAORLIM/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/Users/BAORLIM/.m2/repository/org/yaml/snakeyaml/2.2/snakeyaml-2.2.jar:/Users/BAORLIM/.m2/repository/org/springframework/boot/spring-boot-starter-json/3.2.0/spring-boot-starter-json-3.2.0.jar:/Users/BAORLIM/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.15.3/jackson-datatype-jdk8-2.15.3.jar:/Users/BAORLIM/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.15.3/jackson-datatype-jsr310-2.15.3.jar:/Users/BAORLIM/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.15.3/jackson-module-parameter-names-2.15.3.jar:/Users/BAORLIM/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/3.2.0/spring-boot-starter-tomcat-3.2.0.jar:/Users/BAORLIM/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.16/tomcat-embed-core-10.1.16.jar:/Users/BAORLIM/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.16/tomcat-embed-websocket-10.1.16.jar:/Users/BAORLIM/.m2/repository/org/springframework/spring-web/6.1.1/spring-web-6.1.1.jar:/Users/BAORLIM/.m2/repository/org/springframework/spring-beans/6.1.1/spring-beans-6.1.1.jar:/Users/BAORLIM/.m2/repository/org/springframework/spring-webmvc/6.1.1/spring-webmvc-6.1.1.jar:/Users/BAORLIM/.m2/repository/org/springframework/spring-expression/6.1.1/spring-expression-6.1.1.jar:/Users/BAORLIM/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/3.2.0/spring-boot-starter-data-jpa-3.2.0.jar:/Users/BAORLIM/.m2/repository/org/springframework/boot/spring-boot-starter-aop/3.2.0/spring-boot-starter-aop-3.2.0.jar:/Users/BAORLIM/.m2/repository/org/aspectj/aspectjweaver/1.9.20.1/aspectjweaver-1.9.20.1.jar:/Users/BAORLIM/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/3.2.0/spring-boot-starter-jdbc-3.2.0.jar:/Users/BAORLIM/.m2/repository/com/zaxxer/HikariCP/5.0.1/HikariCP-5.0.1.jar:/Users/BAORLIM/.m2/repository/org/springframework/spring-jdbc/6.1.1/spring-jdbc-6.1.1.jar:/Users/BAORLIM/.m2/repository/org/hibernate/orm/hibernate-core/6.3.1.Final/hibernate-core-6.3.1.Final.jar:/Users/BAORLIM/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0.jar:/Users/BAORLIM/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar:/Users/BAORLIM/.m2/repository/org/jboss/logging/jboss-logging/3.5.3.Final/jboss-logging-3.5.3.Final.jar:/Users/BAORLIM/.m2/repository/org/hibernate/common/hibernate-commons-annotations/6.0.6.Final/hibernate-commons-annotations-6.0.6.Final.jar:/Users/BAORLIM/.m2/repository/io/smallrye/jandex/3.1.2/jandex-3.1.2.jar:/Users/BAORLIM/.m2/repository/com/fasterxml/classmate/1.6.0/classmate-1.6.0.jar:/Users/BAORLIM/.m2/repository/net/bytebuddy/byte-buddy/1.14.10/byte-buddy-1.14.10.jar:/Users/BAORLIM/.m2/repository/org/glassfish/jaxb/jaxb-runtime/4.0.4/jaxb-runtime-4.0.4.jar:/Users/BAORLIM/.m2/repository/org/glassfish/jaxb/jaxb-core/4.0.4/jaxb-core-4.0.4.jar:/Users/BAORLIM/.m2/repository/org/eclipse/angus/angus-activation/2.0.1/angus-activation-2.0.1.jar:/Users/BAORLIM/.m2/repository/org/glassfish/jaxb/txw2/4.0.4/txw2-4.0.4.jar:/Users/BAORLIM/.m2/repository/com/sun/istack/istack-commons-runtime/4.1.2/istack-commons-runtime-4.1.2.jar:/Users/BAORLIM/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar:/Users/BAORLIM/.m2/repository/org/antlr/antlr4-runtime/4.10.1/antlr4-runtime-4.10.1.jar:/Users/BAORLIM/.m2/repository/org/springframework/data/spring-data-jpa/3.2.0/spring-data-jpa-3.2.0.jar:/Users/BAORLIM/.m2/repository/org/springframework/data/spring-data-commons/3.2.0/spring-data-commons-3.2.0.jar:/Users/BAORLIM/.m2/repository/org/springframework/spring-orm/6.1.1/spring-orm-6.1.1.jar:/Users/BAORLIM/.m2/repository/org/springframework/spring-tx/6.1.1/spring-tx-6.1.1.jar:/Users/BAORLIM/.m2/repository/org/springframework/spring-aspects/6.1.1/spring-aspects-6.1.1.jar:/Users/BAORLIM/.m2/repository/org/springframework/boot/spring-boot-starter-security/3.2.0/spring-boot-starter-security-3.2.0.jar:/Users/BAORLIM/.m2/repository/org/springframework/spring-aop/6.1.1/spring-aop-6.1.1.jar:/Users/BAORLIM/.m2/repository/org/springframework/security/spring-security-config/6.2.0/spring-security-config-6.2.0.jar:/Users/BAORLIM/.m2/repository/org/springframework/security/spring-security-web/6.2.0/spring-security-web-6.2.0.jar:/Users/BAORLIM/.m2/repository/org/springframework/boot/spring-boot-starter-validation/3.2.0/spring-boot-starter-validation-3.2.0.jar:/Users/BAORLIM/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/10.1.16/tomcat-embed-el-10.1.16.jar:/Users/BAORLIM/.m2/repository/org/hibernate/validator/hibernate-validator/8.0.1.Final/hibernate-validator-8.0.1.Final.jar:/Users/BAORLIM/.m2/repository/jakarta/validation/jakarta.validation-api/3.0.2/jakarta.validation-api-3.0.2.jar:/Users/BAORLIM/.m2/repository/org/springframework/boot/spring-boot-starter-actuator/3.2.0/spring-boot-starter-actuator-3.2.0.jar:/Users/BAORLIM/.m2/repository/org/springframework/boot/spring-boot-actuator-autoconfigure/3.2.0/spring-boot-actuator-autoconfigure-3.2.0.jar:/Users/BAORLIM/.m2/repository/org/springframework/boot/spring-boot-actuator/3.2.0/spring-boot-actuator-3.2.0.jar:/Users/BAORLIM/.m2/repository/io/micrometer/micrometer-observation/1.12.0/micrometer-observation-1.12.0.jar:/Users/BAORLIM/.m2/repository/io/micrometer/micrometer-commons/1.12.0/micrometer-commons-1.12.0.jar:/Users/BAORLIM/.m2/repository/io/micrometer/micrometer-jakarta9/1.12.0/micrometer-jakarta9-1.12.0.jar:/Users/BAORLIM/.m2/repository/io/micrometer/micrometer-core/1.12.0/micrometer-core-1.12.0.jar:/Users/BAORLIM/.m2/repository/org/hdrhistogram/HdrHistogram/2.1.12/HdrHistogram-2.1.12.jar:/Users/BAORLIM/.m2/repository/org/latencyutils/LatencyUtils/2.0.3/LatencyUtils-2.0.3.jar:/Users/BAORLIM/.m2/repository/org/postgresql/postgresql/42.6.0/postgresql-42.6.0.jar:/Users/BAORLIM/.m2/repository/org/checkerframework/checker-qual/3.31.0/checker-qual-3.31.0.jar:/Users/BAORLIM/.m2/repository/org/flywaydb/flyway-core/9.22.3/flyway-core-9.22.3.jar:/Users/BAORLIM/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-toml/2.15.3/jackson-dataformat-toml-2.15.3.jar:/Users/BAORLIM/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.15.3/jackson-core-2.15.3.jar:/Users/BAORLIM/.m2/repository/com/google/code/gson/gson/2.10.1/gson-2.10.1.jar:/Users/BAORLIM/.m2/repository/io/jsonwebtoken/jjwt-api/0.11.5/jjwt-api-0.11.5.jar:/Users/BAORLIM/.m2/repository/io/jsonwebtoken/jjwt-impl/0.11.5/jjwt-impl-0.11.5.jar:/Users/BAORLIM/.m2/repository/io/jsonwebtoken/jjwt-jackson/0.11.5/jjwt-jackson-0.11.5.jar:/Users/BAORLIM/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.3/jackson-databind-2.15.3.jar:/Users/BAORLIM/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.15.3/jackson-annotations-2.15.3.jar:/Users/BAORLIM/.m2/repository/org/springdoc/springdoc-openapi-starter-webmvc-ui/2.2.0/springdoc-openapi-starter-webmvc-ui-2.2.0.jar:/Users/BAORLIM/.m2/repository/org/springdoc/springdoc-openapi-starter-webmvc-api/2.2.0/springdoc-openapi-starter-webmvc-api-2.2.0.jar:/Users/BAORLIM/.m2/repository/org/springdoc/springdoc-openapi-starter-common/2.2.0/springdoc-openapi-starter-common-2.2.0.jar:/Users/BAORLIM/.m2/repository/io/swagger/core/v3/swagger-core-jakarta/2.2.15/swagger-core-jakarta-2.2.15.jar:/Users/BAORLIM/.m2/repository/io/swagger/core/v3/swagger-annotations-jakarta/2.2.15/swagger-annotations-jakarta-2.2.15.jar:/Users/BAORLIM/.m2/repository/io/swagger/core/v3/swagger-models-jakarta/2.2.15/swagger-models-jakarta-2.2.15.jar:/Users/BAORLIM/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.15.3/jackson-dataformat-yaml-2.15.3.jar:/Users/BAORLIM/.m2/repository/org/webjars/swagger-ui/5.2.0/swagger-ui-5.2.0.jar:/Users/BAORLIM/.m2/repository/org/springframework/boot/spring-boot-devtools/3.2.0/spring-boot-devtools-3.2.0.jar:/Users/BAORLIM/.m2/repository/org/springframework/boot/spring-boot/3.2.0/spring-boot-3.2.0.jar:/Users/BAORLIM/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.2.0/spring-boot-autoconfigure-3.2.0.jar:/Users/BAORLIM/.m2/repository/org/springframework/boot/spring-boot-starter-test/3.2.0/spring-boot-starter-test-3.2.0.jar:/Users/BAORLIM/.m2/repository/org/springframework/boot/spring-boot-test/3.2.0/spring-boot-test-3.2.0.jar:/Users/BAORLIM/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/3.2.0/spring-boot-test-autoconfigure-3.2.0.jar:/Users/BAORLIM/.m2/repository/com/jayway/jsonpath/json-path/2.8.0/json-path-2.8.0.jar:/Users/BAORLIM/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.1/jakarta.xml.bind-api-4.0.1.jar:/Users/BAORLIM/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.2/jakarta.activation-api-2.1.2.jar:/Users/BAORLIM/.m2/repository/net/minidev/json-smart/2.5.0/json-smart-2.5.0.jar:/Users/BAORLIM/.m2/repository/net/minidev/accessors-smart/2.5.0/accessors-smart-2.5.0.jar:/Users/BAORLIM/.m2/repository/org/ow2/asm/asm/9.3/asm-9.3.jar:/Users/BAORLIM/.m2/repository/org/assertj/assertj-core/3.24.2/assertj-core-3.24.2.jar:/Users/BAORLIM/.m2/repository/org/awaitility/awaitility/4.2.0/awaitility-4.2.0.jar:/Users/BAORLIM/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/Users/BAORLIM/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.1/junit-jupiter-5.10.1.jar:/Users/BAORLIM/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.1/junit-jupiter-api-5.10.1.jar:/Users/BAORLIM/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/BAORLIM/.m2/repository/org/junit/platform/junit-platform-commons/1.10.1/junit-platform-commons-1.10.1.jar:/Users/BAORLIM/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/BAORLIM/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.1/junit-jupiter-params-5.10.1.jar:/Users/BAORLIM/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.1/junit-jupiter-engine-5.10.1.jar:/Users/BAORLIM/.m2/repository/org/junit/platform/junit-platform-engine/1.10.1/junit-platform-engine-1.10.1.jar:/Users/BAORLIM/.m2/repository/org/mockito/mockito-core/5.7.0/mockito-core-5.7.0.jar:/Users/BAORLIM/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.10/byte-buddy-agent-1.14.10.jar:/Users/BAORLIM/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/Users/BAORLIM/.m2/repository/org/mockito/mockito-junit-jupiter/5.7.0/mockito-junit-jupiter-5.7.0.jar:/Users/BAORLIM/.m2/repository/org/skyscreamer/jsonassert/1.5.1/jsonassert-1.5.1.jar:/Users/BAORLIM/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/Users/BAORLIM/.m2/repository/org/springframework/spring-core/6.1.1/spring-core-6.1.1.jar:/Users/BAORLIM/.m2/repository/org/springframework/spring-jcl/6.1.1/spring-jcl-6.1.1.jar:/Users/BAORLIM/.m2/repository/org/springframework/spring-test/6.1.1/spring-test-6.1.1.jar:/Users/BAORLIM/.m2/repository/org/xmlunit/xmlunit-core/2.9.1/xmlunit-core-2.9.1.jar:/Users/BAORLIM/.m2/repository/org/springframework/security/spring-security-test/6.2.0/spring-security-test-6.2.0.jar:/Users/BAORLIM/.m2/repository/org/springframework/security/spring-security-core/6.2.0/spring-security-core-6.2.0.jar:/Users/BAORLIM/.m2/repository/org/springframework/security/spring-security-crypto/6.2.0/spring-security-crypto-6.2.0.jar:/Users/BAORLIM/.m2/repository/org/testcontainers/junit-jupiter/1.19.3/junit-jupiter-1.19.3.jar:/Users/BAORLIM/.m2/repository/org/testcontainers/testcontainers/1.19.3/testcontainers-1.19.3.jar:/Users/BAORLIM/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/Users/BAORLIM/.m2/repository/org/hamcrest/hamcrest-core/2.2/hamcrest-core-2.2.jar:/Users/BAORLIM/.m2/repository/org/rnorth/duct-tape/duct-tape/1.0.8/duct-tape-1.0.8.jar:/Users/BAORLIM/.m2/repository/org/jetbrains/annotations/17.0.0/annotations-17.0.0.jar:/Users/BAORLIM/.m2/repository/com/github/docker-java/docker-java-api/3.3.4/docker-java-api-3.3.4.jar:/Users/BAORLIM/.m2/repository/com/github/docker-java/docker-java-transport-zerodep/3.3.4/docker-java-transport-zerodep-3.3.4.jar:/Users/BAORLIM/.m2/repository/com/github/docker-java/docker-java-transport/3.3.4/docker-java-transport-3.3.4.jar:/Users/BAORLIM/.m2/repository/net/java/dev/jna/jna/5.13.0/jna-5.13.0.jar:/Users/BAORLIM/.m2/repository/org/testcontainers/postgresql/1.19.3/postgresql-1.19.3.jar:/Users/BAORLIM/.m2/repository/org/testcontainers/jdbc/1.19.3/jdbc-1.19.3.jar:/Users/BAORLIM/.m2/repository/org/testcontainers/database-commons/1.19.3/database-commons-1.19.3.jar:/Users/BAORLIM/.m2/repository/io/zonky/test/embedded-postgres/2.0.4/embedded-postgres-2.0.4.jar:/Users/BAORLIM/.m2/repository/io/zonky/test/postgres/embedded-postgres-binaries-windows-amd64/14.8.0/embedded-postgres-binaries-windows-amd64-14.8.0.jar:/Users/BAORLIM/.m2/repository/io/zonky/test/postgres/embedded-postgres-binaries-darwin-amd64/14.8.0/embedded-postgres-binaries-darwin-amd64-14.8.0.jar:/Users/BAORLIM/.m2/repository/io/zonky/test/postgres/embedded-postgres-binaries-linux-amd64/14.8.0/embedded-postgres-binaries-linux-amd64-14.8.0.jar:/Users/BAORLIM/.m2/repository/io/zonky/test/postgres/embedded-postgres-binaries-linux-amd64-alpine/14.8.0/embedded-postgres-binaries-linux-amd64-alpine-14.8.0.jar:/Users/BAORLIM/.m2/repository/org/slf4j/slf4j-api/2.0.9/slf4j-api-2.0.9.jar:/Users/BAORLIM/.m2/repository/org/apache/commons/commons-lang3/3.13.0/commons-lang3-3.13.0.jar:/Users/BAORLIM/.m2/repository/org/apache/commons/commons-compress/1.21/commons-compress-1.21.jar:/Users/BAORLIM/.m2/repository/org/tukaani/xz/1.9/xz-1.9.jar:/Users/BAORLIM/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:/Users/BAORLIM/.m2/repository/commons-codec/commons-codec/1.16.0/commons-codec-1.16.0.jar:/Users/BAORLIM/.m2/repository/io/zonky/test/embedded-database-spring-test/2.4.0/embedded-database-spring-test-2.4.0.jar:/Users/BAORLIM/.m2/repository/io/zonky/test/embedded-database-spring-test-autoconfigure/2.4.0/embedded-database-spring-test-autoconfigure-2.4.0.jar:/Users/BAORLIM/.m2/repository/org/testcontainers/mssqlserver/1.19.3/mssqlserver-1.19.3.jar:/Users/BAORLIM/.m2/repository/org/testcontainers/mysql/1.19.3/mysql-1.19.3.jar:/Users/BAORLIM/.m2/repository/org/testcontainers/mariadb/1.19.3/mariadb-1.19.3.jar:/Users/BAORLIM/.m2/repository/org/springframework/spring-context/6.1.1/spring-context-6.1.1.jar:/Users/BAORLIM/.m2/repository/com/cedarsoftware/java-util/1.68.0/java-util-1.68.0.jar:/Users/BAORLIM/.m2/repository/ch/qos/logback/logback-classic/1.4.11/logback-classic-1.4.11.jar:/Users/BAORLIM/.m2/repository/ch/qos/logback/logback-core/1.4.11/logback-core-1.4.11.jar:"/>
+    <property name="java.vm.vendor" value="Amazon.com Inc."/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://aws.amazon.com/corretto/"/>
+    <property name="user.timezone" value="Asia/Kuala_Lumpur"/>
+    <property name="org.jboss.logging.provider" value="slf4j"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="/Users/BAORLIM/Library/Java/JavaVirtualMachines/corretto-17.0.14/Contents/Home/lib"/>
+    <property name="sun.java.command" value="/Users/BAORLIM/playground/singtel-job-network/backend/target/surefire/surefirebooter-20250712031911045_3.jar /Users/BAORLIM/playground/singtel-job-network/backend/target/surefire 2025-07-12T03-19-10_985-jvmRun1 surefire-20250712031911045_1tmp surefire_0-20250712031911045_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/Users/BAORLIM/playground/singtel-job-network/backend/target/test-classes:/Users/BAORLIM/playground/singtel-job-network/backend/target/classes:/Users/BAORLIM/.m2/repository/org/springframework/boot/spring-boot-starter-web/3.2.0/spring-boot-starter-web-3.2.0.jar:/Users/BAORLIM/.m2/repository/org/springframework/boot/spring-boot-starter/3.2.0/spring-boot-starter-3.2.0.jar:/Users/BAORLIM/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.2.0/spring-boot-starter-logging-3.2.0.jar:/Users/BAORLIM/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.21.1/log4j-to-slf4j-2.21.1.jar:/Users/BAORLIM/.m2/repository/org/apache/logging/log4j/log4j-api/2.21.1/log4j-api-2.21.1.jar:/Users/BAORLIM/.m2/repository/org/slf4j/jul-to-slf4j/2.0.9/jul-to-slf4j-2.0.9.jar:/Users/BAORLIM/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/Users/BAORLIM/.m2/repository/org/yaml/snakeyaml/2.2/snakeyaml-2.2.jar:/Users/BAORLIM/.m2/repository/org/springframework/boot/spring-boot-starter-json/3.2.0/spring-boot-starter-json-3.2.0.jar:/Users/BAORLIM/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.15.3/jackson-datatype-jdk8-2.15.3.jar:/Users/BAORLIM/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.15.3/jackson-datatype-jsr310-2.15.3.jar:/Users/BAORLIM/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.15.3/jackson-module-parameter-names-2.15.3.jar:/Users/BAORLIM/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/3.2.0/spring-boot-starter-tomcat-3.2.0.jar:/Users/BAORLIM/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.16/tomcat-embed-core-10.1.16.jar:/Users/BAORLIM/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.16/tomcat-embed-websocket-10.1.16.jar:/Users/BAORLIM/.m2/repository/org/springframework/spring-web/6.1.1/spring-web-6.1.1.jar:/Users/BAORLIM/.m2/repository/org/springframework/spring-beans/6.1.1/spring-beans-6.1.1.jar:/Users/BAORLIM/.m2/repository/org/springframework/spring-webmvc/6.1.1/spring-webmvc-6.1.1.jar:/Users/BAORLIM/.m2/repository/org/springframework/spring-expression/6.1.1/spring-expression-6.1.1.jar:/Users/BAORLIM/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/3.2.0/spring-boot-starter-data-jpa-3.2.0.jar:/Users/BAORLIM/.m2/repository/org/springframework/boot/spring-boot-starter-aop/3.2.0/spring-boot-starter-aop-3.2.0.jar:/Users/BAORLIM/.m2/repository/org/aspectj/aspectjweaver/1.9.20.1/aspectjweaver-1.9.20.1.jar:/Users/BAORLIM/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/3.2.0/spring-boot-starter-jdbc-3.2.0.jar:/Users/BAORLIM/.m2/repository/com/zaxxer/HikariCP/5.0.1/HikariCP-5.0.1.jar:/Users/BAORLIM/.m2/repository/org/springframework/spring-jdbc/6.1.1/spring-jdbc-6.1.1.jar:/Users/BAORLIM/.m2/repository/org/hibernate/orm/hibernate-core/6.3.1.Final/hibernate-core-6.3.1.Final.jar:/Users/BAORLIM/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0.jar:/Users/BAORLIM/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar:/Users/BAORLIM/.m2/repository/org/jboss/logging/jboss-logging/3.5.3.Final/jboss-logging-3.5.3.Final.jar:/Users/BAORLIM/.m2/repository/org/hibernate/common/hibernate-commons-annotations/6.0.6.Final/hibernate-commons-annotations-6.0.6.Final.jar:/Users/BAORLIM/.m2/repository/io/smallrye/jandex/3.1.2/jandex-3.1.2.jar:/Users/BAORLIM/.m2/repository/com/fasterxml/classmate/1.6.0/classmate-1.6.0.jar:/Users/BAORLIM/.m2/repository/net/bytebuddy/byte-buddy/1.14.10/byte-buddy-1.14.10.jar:/Users/BAORLIM/.m2/repository/org/glassfish/jaxb/jaxb-runtime/4.0.4/jaxb-runtime-4.0.4.jar:/Users/BAORLIM/.m2/repository/org/glassfish/jaxb/jaxb-core/4.0.4/jaxb-core-4.0.4.jar:/Users/BAORLIM/.m2/repository/org/eclipse/angus/angus-activation/2.0.1/angus-activation-2.0.1.jar:/Users/BAORLIM/.m2/repository/org/glassfish/jaxb/txw2/4.0.4/txw2-4.0.4.jar:/Users/BAORLIM/.m2/repository/com/sun/istack/istack-commons-runtime/4.1.2/istack-commons-runtime-4.1.2.jar:/Users/BAORLIM/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar:/Users/BAORLIM/.m2/repository/org/antlr/antlr4-runtime/4.10.1/antlr4-runtime-4.10.1.jar:/Users/BAORLIM/.m2/repository/org/springframework/data/spring-data-jpa/3.2.0/spring-data-jpa-3.2.0.jar:/Users/BAORLIM/.m2/repository/org/springframework/data/spring-data-commons/3.2.0/spring-data-commons-3.2.0.jar:/Users/BAORLIM/.m2/repository/org/springframework/spring-orm/6.1.1/spring-orm-6.1.1.jar:/Users/BAORLIM/.m2/repository/org/springframework/spring-tx/6.1.1/spring-tx-6.1.1.jar:/Users/BAORLIM/.m2/repository/org/springframework/spring-aspects/6.1.1/spring-aspects-6.1.1.jar:/Users/BAORLIM/.m2/repository/org/springframework/boot/spring-boot-starter-security/3.2.0/spring-boot-starter-security-3.2.0.jar:/Users/BAORLIM/.m2/repository/org/springframework/spring-aop/6.1.1/spring-aop-6.1.1.jar:/Users/BAORLIM/.m2/repository/org/springframework/security/spring-security-config/6.2.0/spring-security-config-6.2.0.jar:/Users/BAORLIM/.m2/repository/org/springframework/security/spring-security-web/6.2.0/spring-security-web-6.2.0.jar:/Users/BAORLIM/.m2/repository/org/springframework/boot/spring-boot-starter-validation/3.2.0/spring-boot-starter-validation-3.2.0.jar:/Users/BAORLIM/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/10.1.16/tomcat-embed-el-10.1.16.jar:/Users/BAORLIM/.m2/repository/org/hibernate/validator/hibernate-validator/8.0.1.Final/hibernate-validator-8.0.1.Final.jar:/Users/BAORLIM/.m2/repository/jakarta/validation/jakarta.validation-api/3.0.2/jakarta.validation-api-3.0.2.jar:/Users/BAORLIM/.m2/repository/org/springframework/boot/spring-boot-starter-actuator/3.2.0/spring-boot-starter-actuator-3.2.0.jar:/Users/BAORLIM/.m2/repository/org/springframework/boot/spring-boot-actuator-autoconfigure/3.2.0/spring-boot-actuator-autoconfigure-3.2.0.jar:/Users/BAORLIM/.m2/repository/org/springframework/boot/spring-boot-actuator/3.2.0/spring-boot-actuator-3.2.0.jar:/Users/BAORLIM/.m2/repository/io/micrometer/micrometer-observation/1.12.0/micrometer-observation-1.12.0.jar:/Users/BAORLIM/.m2/repository/io/micrometer/micrometer-commons/1.12.0/micrometer-commons-1.12.0.jar:/Users/BAORLIM/.m2/repository/io/micrometer/micrometer-jakarta9/1.12.0/micrometer-jakarta9-1.12.0.jar:/Users/BAORLIM/.m2/repository/io/micrometer/micrometer-core/1.12.0/micrometer-core-1.12.0.jar:/Users/BAORLIM/.m2/repository/org/hdrhistogram/HdrHistogram/2.1.12/HdrHistogram-2.1.12.jar:/Users/BAORLIM/.m2/repository/org/latencyutils/LatencyUtils/2.0.3/LatencyUtils-2.0.3.jar:/Users/BAORLIM/.m2/repository/org/postgresql/postgresql/42.6.0/postgresql-42.6.0.jar:/Users/BAORLIM/.m2/repository/org/checkerframework/checker-qual/3.31.0/checker-qual-3.31.0.jar:/Users/BAORLIM/.m2/repository/org/flywaydb/flyway-core/9.22.3/flyway-core-9.22.3.jar:/Users/BAORLIM/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-toml/2.15.3/jackson-dataformat-toml-2.15.3.jar:/Users/BAORLIM/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.15.3/jackson-core-2.15.3.jar:/Users/BAORLIM/.m2/repository/com/google/code/gson/gson/2.10.1/gson-2.10.1.jar:/Users/BAORLIM/.m2/repository/io/jsonwebtoken/jjwt-api/0.11.5/jjwt-api-0.11.5.jar:/Users/BAORLIM/.m2/repository/io/jsonwebtoken/jjwt-impl/0.11.5/jjwt-impl-0.11.5.jar:/Users/BAORLIM/.m2/repository/io/jsonwebtoken/jjwt-jackson/0.11.5/jjwt-jackson-0.11.5.jar:/Users/BAORLIM/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.3/jackson-databind-2.15.3.jar:/Users/BAORLIM/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.15.3/jackson-annotations-2.15.3.jar:/Users/BAORLIM/.m2/repository/org/springdoc/springdoc-openapi-starter-webmvc-ui/2.2.0/springdoc-openapi-starter-webmvc-ui-2.2.0.jar:/Users/BAORLIM/.m2/repository/org/springdoc/springdoc-openapi-starter-webmvc-api/2.2.0/springdoc-openapi-starter-webmvc-api-2.2.0.jar:/Users/BAORLIM/.m2/repository/org/springdoc/springdoc-openapi-starter-common/2.2.0/springdoc-openapi-starter-common-2.2.0.jar:/Users/BAORLIM/.m2/repository/io/swagger/core/v3/swagger-core-jakarta/2.2.15/swagger-core-jakarta-2.2.15.jar:/Users/BAORLIM/.m2/repository/io/swagger/core/v3/swagger-annotations-jakarta/2.2.15/swagger-annotations-jakarta-2.2.15.jar:/Users/BAORLIM/.m2/repository/io/swagger/core/v3/swagger-models-jakarta/2.2.15/swagger-models-jakarta-2.2.15.jar:/Users/BAORLIM/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.15.3/jackson-dataformat-yaml-2.15.3.jar:/Users/BAORLIM/.m2/repository/org/webjars/swagger-ui/5.2.0/swagger-ui-5.2.0.jar:/Users/BAORLIM/.m2/repository/org/springframework/boot/spring-boot-devtools/3.2.0/spring-boot-devtools-3.2.0.jar:/Users/BAORLIM/.m2/repository/org/springframework/boot/spring-boot/3.2.0/spring-boot-3.2.0.jar:/Users/BAORLIM/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.2.0/spring-boot-autoconfigure-3.2.0.jar:/Users/BAORLIM/.m2/repository/org/springframework/boot/spring-boot-starter-test/3.2.0/spring-boot-starter-test-3.2.0.jar:/Users/BAORLIM/.m2/repository/org/springframework/boot/spring-boot-test/3.2.0/spring-boot-test-3.2.0.jar:/Users/BAORLIM/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/3.2.0/spring-boot-test-autoconfigure-3.2.0.jar:/Users/BAORLIM/.m2/repository/com/jayway/jsonpath/json-path/2.8.0/json-path-2.8.0.jar:/Users/BAORLIM/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.1/jakarta.xml.bind-api-4.0.1.jar:/Users/BAORLIM/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.2/jakarta.activation-api-2.1.2.jar:/Users/BAORLIM/.m2/repository/net/minidev/json-smart/2.5.0/json-smart-2.5.0.jar:/Users/BAORLIM/.m2/repository/net/minidev/accessors-smart/2.5.0/accessors-smart-2.5.0.jar:/Users/BAORLIM/.m2/repository/org/ow2/asm/asm/9.3/asm-9.3.jar:/Users/BAORLIM/.m2/repository/org/assertj/assertj-core/3.24.2/assertj-core-3.24.2.jar:/Users/BAORLIM/.m2/repository/org/awaitility/awaitility/4.2.0/awaitility-4.2.0.jar:/Users/BAORLIM/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/Users/BAORLIM/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.1/junit-jupiter-5.10.1.jar:/Users/BAORLIM/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.1/junit-jupiter-api-5.10.1.jar:/Users/BAORLIM/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/BAORLIM/.m2/repository/org/junit/platform/junit-platform-commons/1.10.1/junit-platform-commons-1.10.1.jar:/Users/BAORLIM/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/BAORLIM/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.1/junit-jupiter-params-5.10.1.jar:/Users/BAORLIM/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.1/junit-jupiter-engine-5.10.1.jar:/Users/BAORLIM/.m2/repository/org/junit/platform/junit-platform-engine/1.10.1/junit-platform-engine-1.10.1.jar:/Users/BAORLIM/.m2/repository/org/mockito/mockito-core/5.7.0/mockito-core-5.7.0.jar:/Users/BAORLIM/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.10/byte-buddy-agent-1.14.10.jar:/Users/BAORLIM/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/Users/BAORLIM/.m2/repository/org/mockito/mockito-junit-jupiter/5.7.0/mockito-junit-jupiter-5.7.0.jar:/Users/BAORLIM/.m2/repository/org/skyscreamer/jsonassert/1.5.1/jsonassert-1.5.1.jar:/Users/BAORLIM/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/Users/BAORLIM/.m2/repository/org/springframework/spring-core/6.1.1/spring-core-6.1.1.jar:/Users/BAORLIM/.m2/repository/org/springframework/spring-jcl/6.1.1/spring-jcl-6.1.1.jar:/Users/BAORLIM/.m2/repository/org/springframework/spring-test/6.1.1/spring-test-6.1.1.jar:/Users/BAORLIM/.m2/repository/org/xmlunit/xmlunit-core/2.9.1/xmlunit-core-2.9.1.jar:/Users/BAORLIM/.m2/repository/org/springframework/security/spring-security-test/6.2.0/spring-security-test-6.2.0.jar:/Users/BAORLIM/.m2/repository/org/springframework/security/spring-security-core/6.2.0/spring-security-core-6.2.0.jar:/Users/BAORLIM/.m2/repository/org/springframework/security/spring-security-crypto/6.2.0/spring-security-crypto-6.2.0.jar:/Users/BAORLIM/.m2/repository/org/testcontainers/junit-jupiter/1.19.3/junit-jupiter-1.19.3.jar:/Users/BAORLIM/.m2/repository/org/testcontainers/testcontainers/1.19.3/testcontainers-1.19.3.jar:/Users/BAORLIM/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/Users/BAORLIM/.m2/repository/org/hamcrest/hamcrest-core/2.2/hamcrest-core-2.2.jar:/Users/BAORLIM/.m2/repository/org/rnorth/duct-tape/duct-tape/1.0.8/duct-tape-1.0.8.jar:/Users/BAORLIM/.m2/repository/org/jetbrains/annotations/17.0.0/annotations-17.0.0.jar:/Users/BAORLIM/.m2/repository/com/github/docker-java/docker-java-api/3.3.4/docker-java-api-3.3.4.jar:/Users/BAORLIM/.m2/repository/com/github/docker-java/docker-java-transport-zerodep/3.3.4/docker-java-transport-zerodep-3.3.4.jar:/Users/BAORLIM/.m2/repository/com/github/docker-java/docker-java-transport/3.3.4/docker-java-transport-3.3.4.jar:/Users/BAORLIM/.m2/repository/net/java/dev/jna/jna/5.13.0/jna-5.13.0.jar:/Users/BAORLIM/.m2/repository/org/testcontainers/postgresql/1.19.3/postgresql-1.19.3.jar:/Users/BAORLIM/.m2/repository/org/testcontainers/jdbc/1.19.3/jdbc-1.19.3.jar:/Users/BAORLIM/.m2/repository/org/testcontainers/database-commons/1.19.3/database-commons-1.19.3.jar:/Users/BAORLIM/.m2/repository/io/zonky/test/embedded-postgres/2.0.4/embedded-postgres-2.0.4.jar:/Users/BAORLIM/.m2/repository/io/zonky/test/postgres/embedded-postgres-binaries-windows-amd64/14.8.0/embedded-postgres-binaries-windows-amd64-14.8.0.jar:/Users/BAORLIM/.m2/repository/io/zonky/test/postgres/embedded-postgres-binaries-darwin-amd64/14.8.0/embedded-postgres-binaries-darwin-amd64-14.8.0.jar:/Users/BAORLIM/.m2/repository/io/zonky/test/postgres/embedded-postgres-binaries-linux-amd64/14.8.0/embedded-postgres-binaries-linux-amd64-14.8.0.jar:/Users/BAORLIM/.m2/repository/io/zonky/test/postgres/embedded-postgres-binaries-linux-amd64-alpine/14.8.0/embedded-postgres-binaries-linux-amd64-alpine-14.8.0.jar:/Users/BAORLIM/.m2/repository/org/slf4j/slf4j-api/2.0.9/slf4j-api-2.0.9.jar:/Users/BAORLIM/.m2/repository/org/apache/commons/commons-lang3/3.13.0/commons-lang3-3.13.0.jar:/Users/BAORLIM/.m2/repository/org/apache/commons/commons-compress/1.21/commons-compress-1.21.jar:/Users/BAORLIM/.m2/repository/org/tukaani/xz/1.9/xz-1.9.jar:/Users/BAORLIM/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:/Users/BAORLIM/.m2/repository/commons-codec/commons-codec/1.16.0/commons-codec-1.16.0.jar:/Users/BAORLIM/.m2/repository/io/zonky/test/embedded-database-spring-test/2.4.0/embedded-database-spring-test-2.4.0.jar:/Users/BAORLIM/.m2/repository/io/zonky/test/embedded-database-spring-test-autoconfigure/2.4.0/embedded-database-spring-test-autoconfigure-2.4.0.jar:/Users/BAORLIM/.m2/repository/org/testcontainers/mssqlserver/1.19.3/mssqlserver-1.19.3.jar:/Users/BAORLIM/.m2/repository/org/testcontainers/mysql/1.19.3/mysql-1.19.3.jar:/Users/BAORLIM/.m2/repository/org/testcontainers/mariadb/1.19.3/mariadb-1.19.3.jar:/Users/BAORLIM/.m2/repository/org/springframework/spring-context/6.1.1/spring-context-6.1.1.jar:/Users/BAORLIM/.m2/repository/com/cedarsoftware/java-util/1.68.0/java-util-1.68.0.jar:/Users/BAORLIM/.m2/repository/ch/qos/logback/logback-classic/1.4.11/logback-classic-1.4.11.jar:/Users/BAORLIM/.m2/repository/ch/qos/logback/logback-core/1.4.11/logback-core-1.4.11.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/BAORLIM"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2025-01-21"/>
+    <property name="java.home" value="/Users/BAORLIM/Library/Java/JavaVirtualMachines/corretto-17.0.14/Contents/Home"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/Users/BAORLIM/playground/singtel-job-network/backend"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="FILE_LOG_CHARSET" value="UTF-8"/>
+    <property name="java.awt.headless" value="true"/>
+    <property name="surefire.real.class.path" value="/Users/BAORLIM/playground/singtel-job-network/backend/target/surefire/surefirebooter-20250712031911045_3.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="17.0.14+7-LTS"/>
+    <property name="user.name" value="BAORLIM"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="15.5"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="FILE_LOG_PATTERN" value="%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Corretto-17.0.14.7.1"/>
+    <property name="localRepository" value="/Users/BAORLIM/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/corretto/corretto-17/issues/"/>
+    <property name="java.io.tmpdir" value="/var/folders/4h/r79srl3n6s7cvr3p7yll6lmr0000gn/T/"/>
+    <property name="java.version" value="17.0.14"/>
+    <property name="user.dir" value="/Users/BAORLIM/playground/singtel-job-network/backend"/>
+    <property name="os.arch" value="aarch64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="PID" value="26677"/>
+    <property name="CONSOLE_LOG_CHARSET" value="UTF-8"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/BAORLIM/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Amazon.com Inc."/>
+    <property name="java.vm.version" value="17.0.14+7-LTS"/>
+    <property name="java.specification.maintenance.version" value="1"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="java.class.version" value="61.0"/>
+    <property name="CONSOLE_LOG_PATTERN" value="%d{yyyy-MM-dd HH:mm:ss} - %msg%n"/>
+    <property name="LOGGED_APPLICATION_NAME" value="[singtel-network-ondemand-test] "/>
+  </properties>
+  <testcase name="invalidCredentials_Rejected" classname="com.singtel.network.NetworkOnDemandApplicationTests" time="0.838">
+    <system-out><![CDATA[03:19:11.575 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.singtel.network.NetworkOnDemandApplicationTests]: NetworkOnDemandApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+03:19:11.636 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.singtel.network.NetworkOnDemandApplication for test class com.singtel.network.NetworkOnDemandApplicationTests
+03:19:11.705 [main] INFO org.springframework.boot.devtools.restart.RestartApplicationListener -- Restart disabled due to context in which it is running
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.0)
+
+2025-07-12 03:19:11 - Starting NetworkOnDemandApplicationTests using Java 17.0.14 with PID 26677 (started by BAORLIM in /Users/BAORLIM/playground/singtel-job-network/backend)
+2025-07-12 03:19:11 - Running with Spring Boot v3.2.0, Spring v6.1.1
+2025-07-12 03:19:11 - The following 1 profile is active: "test"
+2025-07-12 03:19:11 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@1bcb79c2
+2025-07-12 03:19:12 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-12 03:19:12 - Finished Spring Data repository scanning in 35 ms. Found 7 JPA repository interfaces.
+2025-07-12 03:19:12 - Replacing 'dataSource' DataSource bean with embedded version
+2025-07-12 03:19:12 - Bean 'io.zonky.test.db.config.EmbeddedDatabaseAutoConfiguration' of type [io.zonky.test.db.config.EmbeddedDatabaseAutoConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [flywayDatabaseExtension] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-07-12 03:19:12 - Image pull policy will be performed by: DefaultPullPolicy()
+2025-07-12 03:19:12 - Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+2025-07-12 03:19:13 - Loaded org.testcontainers.dockerclient.UnixSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+2025-07-12 03:19:13 - Found Docker environment with local Unix socket (unix:///var/run/docker.sock)
+2025-07-12 03:19:13 - Docker host IP address is localhost
+2025-07-12 03:19:13 - Connected to docker: 
+  Server Version: 5.3.2
+  API Version: 1.41
+  Operating System: fedora
+  Total Memory: 3616 MB
+2025-07-12 03:19:13 - Creating container for image: testcontainers/ryuk:0.5.1
+2025-07-12 03:19:13 - Failure when attempting to lookup auth config. Please ignore if you don't have images in an authenticated registry. Details: (dockerImageName: testcontainers/ryuk:0.5.1, configFile: /Users/BAORLIM/.docker/config.json, configEnv: DOCKER_AUTH_CONFIG). Falling back to docker-java default behaviour. Exception message: Status 404: No config supplied. Checked in order: /Users/BAORLIM/.docker/config.json (file not found), DOCKER_AUTH_CONFIG (not set)
+2025-07-12 03:19:13 - Container testcontainers/ryuk:0.5.1 is starting: 709107f87042917f6695290ac8bcc789c43db1cd29acc4b6e95197bcb0cf157d
+2025-07-12 03:19:13 - Container testcontainers/ryuk:0.5.1 started in PT0.204194S
+2025-07-12 03:19:13 - Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+2025-07-12 03:19:13 - Checking the system...
+2025-07-12 03:19:13 - ✔︎ Docker server version should be at least 1.6.0
+2025-07-12 03:19:13 - Creating container for image: postgres:11-alpine
+2025-07-12 03:19:13 - Container postgres:11-alpine is starting: de6af81735ba01f060d583be357de4d1b2e62b801232bba5c96f4cab216144a9
+2025-07-12 03:19:14 - Container postgres:11-alpine started in PT1.254264S
+2025-07-12 03:19:14 - Container is started (JDBC URL: jdbc:postgresql://localhost:35943/test?loggerLevel=OFF)
+2025-07-12 03:19:14 - STDOUT: The files belonging to this database system will be owned by user "postgres".
+2025-07-12 03:19:14 - STDOUT: This user must also own the server process.
+2025-07-12 03:19:14 - STDOUT: 
+2025-07-12 03:19:14 - STDOUT: The database cluster will be initialized with locale "en_US.utf8".
+2025-07-12 03:19:14 - STDOUT: The default database encoding has accordingly been set to "UTF8".
+2025-07-12 03:19:14 - STDOUT: The default text search configuration will be set to "english".
+2025-07-12 03:19:14 - STDOUT: 
+2025-07-12 03:19:14 - STDOUT: Data page checksums are disabled.
+2025-07-12 03:19:14 - STDOUT: 
+2025-07-12 03:19:14 - STDOUT: fixing permissions on existing directory /var/lib/postgresql/data ... ok
+2025-07-12 03:19:14 - STDOUT: creating subdirectories ... ok
+2025-07-12 03:19:14 - STDOUT: selecting default max_connections ... 100
+2025-07-12 03:19:14 - STDOUT: selecting default shared_buffers ... 128MB
+2025-07-12 03:19:14 - STDOUT: selecting default timezone ... UTC
+2025-07-12 03:19:14 - STDOUT: selecting dynamic shared memory implementation ... posix
+2025-07-12 03:19:14 - STDOUT: creating configuration files ... ok
+2025-07-12 03:19:14 - STDOUT: running bootstrap script ... ok
+2025-07-12 03:19:14 - STDERR: sh: locale: not found
+2025-07-12 03:19:14 - STDERR: 2025-07-11 19:19:13.781 UTC [25] WARNING:  no usable system locales were found
+2025-07-12 03:19:14 - STDOUT: performing post-bootstrap initialization ... ok
+2025-07-12 03:19:14 - STDOUT: 
+2025-07-12 03:19:14 - STDOUT: Sync to disk skipped.
+2025-07-12 03:19:14 - STDOUT: The data directory might become corrupt if the operating system crashes.
+2025-07-12 03:19:14 - STDOUT: 
+2025-07-12 03:19:14 - STDOUT: Success. You can now start the database server using:
+2025-07-12 03:19:14 - STDOUT: 
+2025-07-12 03:19:14 - STDOUT:     pg_ctl -D /var/lib/postgresql/data -l logfile start
+2025-07-12 03:19:14 - STDOUT: 
+2025-07-12 03:19:14 - STDERR: 
+2025-07-12 03:19:14 - STDERR: WARNING: enabling "trust" authentication for local connections
+2025-07-12 03:19:14 - STDERR: You can change this by editing pg_hba.conf or using the option -A, or
+2025-07-12 03:19:14 - STDERR: --auth-local and --auth-host, the next time you run initdb.
+2025-07-12 03:19:14 - STDOUT: waiting for server to start....2025-07-11 19:19:13.961 UTC [31] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2025-07-12 03:19:14 - STDOUT: 2025-07-11 19:19:13.966 UTC [32] LOG:  database system was shut down at 2025-07-11 19:19:13 UTC
+2025-07-12 03:19:14 - STDOUT: 2025-07-11 19:19:13.968 UTC [31] LOG:  database system is ready to accept connections
+2025-07-12 03:19:14 - STDOUT:  done
+2025-07-12 03:19:14 - STDOUT: server started
+2025-07-12 03:19:14 - STDOUT: CREATE DATABASE
+2025-07-12 03:19:14 - STDOUT: 
+2025-07-12 03:19:14 - STDOUT: 
+2025-07-12 03:19:14 - STDOUT: /usr/local/bin/docker-entrypoint.sh: ignoring /docker-entrypoint-initdb.d/*
+2025-07-12 03:19:14 - STDOUT: 
+2025-07-12 03:19:14 - STDOUT: waiting for server to shut down....2025-07-11 19:19:14.284 UTC [31] LOG:  received fast shutdown request
+2025-07-12 03:19:14 - STDOUT: 2025-07-11 19:19:14.284 UTC [31] LOG:  aborting any active transactions
+2025-07-12 03:19:14 - STDOUT: 2025-07-11 19:19:14.285 UTC [31] LOG:  background worker "logical replication launcher" (PID 38) exited with exit code 1
+2025-07-12 03:19:14 - STDOUT: 2025-07-11 19:19:14.286 UTC [33] LOG:  shutting down
+2025-07-12 03:19:14 - STDOUT: 2025-07-11 19:19:14.289 UTC [31] LOG:  database system is shut down
+2025-07-12 03:19:14 - STDOUT:  done
+2025-07-12 03:19:14 - STDOUT: server stopped
+2025-07-12 03:19:14 - STDOUT: 
+2025-07-12 03:19:14 - STDOUT: PostgreSQL init process complete; ready for start up.
+2025-07-12 03:19:14 - STDOUT: 
+2025-07-12 03:19:14 - STDERR: 2025-07-11 19:19:14.391 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2025-07-12 03:19:14 - STDERR: 2025-07-11 19:19:14.391 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+2025-07-12 03:19:14 - STDERR: 2025-07-11 19:19:14.391 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2025-07-12 03:19:14 - STDERR: 2025-07-11 19:19:14.399 UTC [46] LOG:  database system was shut down at 2025-07-11 19:19:14 UTC
+2025-07-12 03:19:14 - STDERR: 2025-07-11 19:19:14.401 UTC [1] LOG:  database system is ready to accept connections
+2025-07-12 03:19:15 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-12 03:19:15 - HHH000412: Hibernate ORM core version 6.3.1.Final
+2025-07-12 03:19:15 - HHH000026: Second-level cache disabled
+2025-07-12 03:19:15 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-12 03:19:15 - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-12 03:19:16 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-12 03:19:16 - 
+    alter table if exists singtel_app.bandwidth_changes 
+       drop constraint if exists FKphxhif2jjrqu9lieuyx52que4
+Hibernate: 
+    alter table if exists singtel_app.bandwidth_changes 
+       drop constraint if exists FKphxhif2jjrqu9lieuyx52que4
+2025-07-12 03:19:16 - SQL Warning Code: 0, SQLState: 00000
+2025-07-12 03:19:16 - relation "bandwidth_changes" does not exist, skipping
+2025-07-12 03:19:16 - 
+    alter table if exists singtel_app.bandwidth_changes 
+       drop constraint if exists FK28nd02kyos4t7lh0v8kcekug5
+Hibernate: 
+    alter table if exists singtel_app.bandwidth_changes 
+       drop constraint if exists FK28nd02kyos4t7lh0v8kcekug5
+2025-07-12 03:19:16 - SQL Warning Code: 0, SQLState: 00000
+2025-07-12 03:19:16 - relation "bandwidth_changes" does not exist, skipping
+2025-07-12 03:19:16 - 
+    alter table if exists singtel_app.orders 
+       drop constraint if exists FK1vldikbqexeu85qvsedncxvs3
+Hibernate: 
+    alter table if exists singtel_app.orders 
+       drop constraint if exists FK1vldikbqexeu85qvsedncxvs3
+2025-07-12 03:19:16 - SQL Warning Code: 0, SQLState: 00000
+2025-07-12 03:19:16 - relation "orders" does not exist, skipping
+2025-07-12 03:19:16 - 
+    alter table if exists singtel_app.orders 
+       drop constraint if exists FKj7bkj6q0u3681uv3bvq21316i
+Hibernate: 
+    alter table if exists singtel_app.orders 
+       drop constraint if exists FKj7bkj6q0u3681uv3bvq21316i
+2025-07-12 03:19:16 - SQL Warning Code: 0, SQLState: 00000
+2025-07-12 03:19:16 - relation "orders" does not exist, skipping
+2025-07-12 03:19:16 - 
+    alter table if exists singtel_app.orders 
+       drop constraint if exists FKrhawop2o9fmjl9a74grq767sb
+Hibernate: 
+    alter table if exists singtel_app.orders 
+       drop constraint if exists FKrhawop2o9fmjl9a74grq767sb
+2025-07-12 03:19:16 - SQL Warning Code: 0, SQLState: 00000
+2025-07-12 03:19:16 - relation "orders" does not exist, skipping
+2025-07-12 03:19:16 - 
+    alter table if exists singtel_app.orders 
+       drop constraint if exists FK32ql8ubntj5uh44ph9659tiih
+Hibernate: 
+    alter table if exists singtel_app.orders 
+       drop constraint if exists FK32ql8ubntj5uh44ph9659tiih
+2025-07-12 03:19:16 - SQL Warning Code: 0, SQLState: 00000
+2025-07-12 03:19:16 - relation "orders" does not exist, skipping
+2025-07-12 03:19:16 - 
+    alter table if exists singtel_app.service_instances 
+       drop constraint if exists FKfgoj8d6fdavbtq97989ay4l5l
+Hibernate: 
+    alter table if exists singtel_app.service_instances 
+       drop constraint if exists FKfgoj8d6fdavbtq97989ay4l5l
+2025-07-12 03:19:16 - SQL Warning Code: 0, SQLState: 00000
+2025-07-12 03:19:16 - relation "service_instances" does not exist, skipping
+2025-07-12 03:19:16 - 
+    alter table if exists singtel_app.service_instances 
+       drop constraint if exists FKguvw7g804iujk1276dy213sve
+Hibernate: 
+    alter table if exists singtel_app.service_instances 
+       drop constraint if exists FKguvw7g804iujk1276dy213sve
+2025-07-12 03:19:16 - SQL Warning Code: 0, SQLState: 00000
+2025-07-12 03:19:16 - relation "service_instances" does not exist, skipping
+2025-07-12 03:19:16 - 
+    alter table if exists singtel_app.services 
+       drop constraint if exists FKfffr4emayc2n4uq3yv618d9j0
+Hibernate: 
+    alter table if exists singtel_app.services 
+       drop constraint if exists FKfffr4emayc2n4uq3yv618d9j0
+2025-07-12 03:19:16 - SQL Warning Code: 0, SQLState: 00000
+2025-07-12 03:19:16 - relation "services" does not exist, skipping
+2025-07-12 03:19:16 - 
+    alter table if exists singtel_app.users 
+       drop constraint if exists FKin8gn4o1hpiwe6qe4ey7ykwq7
+Hibernate: 
+    alter table if exists singtel_app.users 
+       drop constraint if exists FKin8gn4o1hpiwe6qe4ey7ykwq7
+2025-07-12 03:19:16 - SQL Warning Code: 0, SQLState: 00000
+2025-07-12 03:19:16 - relation "users" does not exist, skipping
+2025-07-12 03:19:16 - 
+    drop table if exists singtel_app.bandwidth_changes cascade
+Hibernate: 
+    drop table if exists singtel_app.bandwidth_changes cascade
+2025-07-12 03:19:16 - SQL Warning Code: 0, SQLState: 00000
+2025-07-12 03:19:16 - table "bandwidth_changes" does not exist, skipping
+2025-07-12 03:19:16 - 
+    drop table if exists singtel_app.companies cascade
+Hibernate: 
+    drop table if exists singtel_app.companies cascade
+2025-07-12 03:19:16 - SQL Warning Code: 0, SQLState: 00000
+2025-07-12 03:19:16 - table "companies" does not exist, skipping
+2025-07-12 03:19:16 - 
+    drop table if exists singtel_app.orders cascade
+Hibernate: 
+    drop table if exists singtel_app.orders cascade
+2025-07-12 03:19:16 - SQL Warning Code: 0, SQLState: 00000
+2025-07-12 03:19:16 - table "orders" does not exist, skipping
+2025-07-12 03:19:16 - 
+    drop table if exists singtel_app.service_categories cascade
+Hibernate: 
+    drop table if exists singtel_app.service_categories cascade
+2025-07-12 03:19:16 - SQL Warning Code: 0, SQLState: 00000
+2025-07-12 03:19:16 - table "service_categories" does not exist, skipping
+2025-07-12 03:19:16 - 
+    drop table if exists singtel_app.service_instances cascade
+Hibernate: 
+    drop table if exists singtel_app.service_instances cascade
+2025-07-12 03:19:16 - SQL Warning Code: 0, SQLState: 00000
+2025-07-12 03:19:16 - table "service_instances" does not exist, skipping
+2025-07-12 03:19:16 - 
+    drop table if exists singtel_app.services cascade
+Hibernate: 
+    drop table if exists singtel_app.services cascade
+2025-07-12 03:19:16 - SQL Warning Code: 0, SQLState: 00000
+2025-07-12 03:19:16 - table "services" does not exist, skipping
+2025-07-12 03:19:16 - 
+    drop table if exists singtel_app.users cascade
+Hibernate: 
+    drop table if exists singtel_app.users cascade
+2025-07-12 03:19:16 - SQL Warning Code: 0, SQLState: 00000
+2025-07-12 03:19:16 - table "users" does not exist, skipping
+2025-07-12 03:19:16 - 
+    create table singtel_app.bandwidth_changes (
+        cost_impact numeric(10,2),
+        new_bandwidth_mbps integer not null,
+        previous_bandwidth_mbps integer not null,
+        applied_at timestamp(6),
+        created_at timestamp(6) not null,
+        scheduled_at timestamp(6),
+        updated_at timestamp(6) not null,
+        id uuid not null,
+        service_instance_id uuid not null,
+        user_id uuid not null,
+        change_reason varchar(255),
+        status varchar(255) not null check (status in ('PENDING','SCHEDULED','APPLIED','FAILED','CANCELLED')),
+        workflow_id varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table singtel_app.bandwidth_changes (
+        cost_impact numeric(10,2),
+        new_bandwidth_mbps integer not null,
+        previous_bandwidth_mbps integer not null,
+        applied_at timestamp(6),
+        created_at timestamp(6) not null,
+        scheduled_at timestamp(6),
+        updated_at timestamp(6) not null,
+        id uuid not null,
+        service_instance_id uuid not null,
+        user_id uuid not null,
+        change_reason varchar(255),
+        status varchar(255) not null check (status in ('PENDING','SCHEDULED','APPLIED','FAILED','CANCELLED')),
+        workflow_id varchar(255),
+        primary key (id)
+    )
+2025-07-12 03:19:16 - 
+    create table singtel_app.companies (
+        created_at timestamp(6) not null,
+        updated_at timestamp(6) not null,
+        id uuid not null,
+        address TEXT,
+        company_size varchar(255),
+        country varchar(255),
+        email varchar(255) not null,
+        industry varchar(255),
+        name varchar(255) not null,
+        phone varchar(255),
+        postal_code varchar(255),
+        registration_number varchar(255) not null unique,
+        status varchar(255) not null check (status in ('ACTIVE','SUSPENDED','INACTIVE')),
+        primary key (id)
+    )
+Hibernate: 
+    create table singtel_app.companies (
+        created_at timestamp(6) not null,
+        updated_at timestamp(6) not null,
+        id uuid not null,
+        address TEXT,
+        company_size varchar(255),
+        country varchar(255),
+        email varchar(255) not null,
+        industry varchar(255),
+        name varchar(255) not null,
+        phone varchar(255),
+        postal_code varchar(255),
+        registration_number varchar(255) not null unique,
+        status varchar(255) not null check (status in ('ACTIVE','SUSPENDED','INACTIVE')),
+        primary key (id)
+    )
+2025-07-12 03:19:16 - 
+    create table singtel_app.orders (
+        actual_completion_date date,
+        estimated_completion_date date,
+        requested_bandwidth_mbps integer,
+        requested_date date,
+        total_cost numeric(10,2),
+        created_at timestamp(6) not null,
+        updated_at timestamp(6) not null,
+        company_id uuid not null,
+        id uuid not null,
+        service_id uuid not null,
+        service_instance_id uuid unique,
+        user_id uuid not null,
+        contact_email varchar(255),
+        contact_person varchar(255),
+        contact_phone varchar(255),
+        installation_address TEXT,
+        notes TEXT,
+        order_number varchar(255) not null unique,
+        order_type varchar(255) not null check (order_type in ('NEW_SERVICE','MODIFY_SERVICE','TERMINATE_SERVICE')),
+        postal_code varchar(255),
+        status varchar(255) not null check (status in ('SUBMITTED','APPROVED','IN_PROGRESS','COMPLETED','CANCELLED','FAILED')),
+        workflow_id varchar(255),
+        primary key (id)
+    )
+Hibernate: 
+    create table singtel_app.orders (
+        actual_completion_date date,
+        estimated_completion_date date,
+        requested_bandwidth_mbps integer,
+        requested_date date,
+        total_cost numeric(10,2),
+        created_at timestamp(6) not null,
+        updated_at timestamp(6) not null,
+        company_id uuid not null,
+        id uuid not null,
+        service_id uuid not null,
+        service_instance_id uuid unique,
+        user_id uuid not null,
+        contact_email varchar(255),
+        contact_person varchar(255),
+        contact_phone varchar(255),
+        installation_address TEXT,
+        notes TEXT,
+        order_number varchar(255) not null unique,
+        order_type varchar(255) not null check (order_type in ('NEW_SERVICE','MODIFY_SERVICE','TERMINATE_SERVICE')),
+        postal_code varchar(255),
+        status varchar(255) not null check (status in ('SUBMITTED','APPROVED','IN_PROGRESS','COMPLETED','CANCELLED','FAILED')),
+        workflow_id varchar(255),
+        primary key (id)
+    )
+2025-07-12 03:19:16 - 
+    create table singtel_app.service_categories (
+        display_order integer,
+        is_active boolean,
+        created_at timestamp(6) not null,
+        updated_at timestamp(6) not null,
+        id uuid not null,
+        description TEXT,
+        name varchar(255) not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table singtel_app.service_categories (
+        display_order integer,
+        is_active boolean,
+        created_at timestamp(6) not null,
+        updated_at timestamp(6) not null,
+        id uuid not null,
+        description TEXT,
+        name varchar(255) not null,
+        primary key (id)
+    )
+2025-07-12 03:19:16 - 
+    create table singtel_app.service_instances (
+        contract_end_date date,
+        contract_start_date date,
+        current_bandwidth_mbps integer not null,
+        monthly_cost numeric(10,2),
+        created_at timestamp(6) not null,
+        last_bandwidth_change_at timestamp(6),
+        provisioned_at timestamp(6),
+        updated_at timestamp(6) not null,
+        company_id uuid not null,
+        id uuid not null,
+        service_id uuid not null,
+        contact_email varchar(255),
+        contact_person varchar(255),
+        contact_phone varchar(255),
+        installation_address TEXT not null,
+        instance_name varchar(255) not null,
+        postal_code varchar(255),
+        status varchar(255) not null check (status in ('PENDING','PROVISIONING','ACTIVE','SUSPENDED','TERMINATED')),
+        primary key (id)
+    )
+Hibernate: 
+    create table singtel_app.service_instances (
+        contract_end_date date,
+        contract_start_date date,
+        current_bandwidth_mbps integer not null,
+        monthly_cost numeric(10,2),
+        created_at timestamp(6) not null,
+        last_bandwidth_change_at timestamp(6),
+        provisioned_at timestamp(6),
+        updated_at timestamp(6) not null,
+        company_id uuid not null,
+        id uuid not null,
+        service_id uuid not null,
+        contact_email varchar(255),
+        contact_person varchar(255),
+        contact_phone varchar(255),
+        installation_address TEXT not null,
+        instance_name varchar(255) not null,
+        postal_code varchar(255),
+        status varchar(255) not null check (status in ('PENDING','PROVISIONING','ACTIVE','SUSPENDED','TERMINATED')),
+        primary key (id)
+    )
+2025-07-12 03:19:16 - 
+    create table singtel_app.services (
+        base_bandwidth_mbps integer,
+        base_price_monthly numeric(10,2),
+        contract_term_months integer,
+        is_available boolean,
+        is_bandwidth_adjustable boolean,
+        max_bandwidth_mbps integer,
+        min_bandwidth_mbps integer,
+        price_per_mbps numeric(10,4),
+        provisioning_time_hours integer,
+        setup_fee numeric(10,2),
+        created_at timestamp(6) not null,
+        updated_at timestamp(6) not null,
+        category_id uuid,
+        id uuid not null,
+        description TEXT,
+        name varchar(255) not null,
+        service_type varchar(255) not null,
+        features jsonb,
+        technical_specs jsonb,
+        primary key (id)
+    )
+Hibernate: 
+    create table singtel_app.services (
+        base_bandwidth_mbps integer,
+        base_price_monthly numeric(10,2),
+        contract_term_months integer,
+        is_available boolean,
+        is_bandwidth_adjustable boolean,
+        max_bandwidth_mbps integer,
+        min_bandwidth_mbps integer,
+        price_per_mbps numeric(10,4),
+        provisioning_time_hours integer,
+        setup_fee numeric(10,2),
+        created_at timestamp(6) not null,
+        updated_at timestamp(6) not null,
+        category_id uuid,
+        id uuid not null,
+        description TEXT,
+        name varchar(255) not null,
+        service_type varchar(255) not null,
+        features jsonb,
+        technical_specs jsonb,
+        primary key (id)
+    )
+2025-07-12 03:19:16 - 
+    create table singtel_app.users (
+        created_at timestamp(6) not null,
+        last_login_at timestamp(6),
+        password_changed_at timestamp(6),
+        updated_at timestamp(6) not null,
+        company_id uuid not null,
+        id uuid not null,
+        email varchar(255) not null unique,
+        first_name varchar(255) not null,
+        last_name varchar(255) not null,
+        password_hash varchar(255) not null,
+        phone varchar(255),
+        role varchar(255) not null check (role in ('ADMIN','USER','VIEWER')),
+        status varchar(255) not null check (status in ('ACTIVE','SUSPENDED','INACTIVE')),
+        username varchar(255) not null unique,
+        primary key (id)
+    )
+Hibernate: 
+    create table singtel_app.users (
+        created_at timestamp(6) not null,
+        last_login_at timestamp(6),
+        password_changed_at timestamp(6),
+        updated_at timestamp(6) not null,
+        company_id uuid not null,
+        id uuid not null,
+        email varchar(255) not null unique,
+        first_name varchar(255) not null,
+        last_name varchar(255) not null,
+        password_hash varchar(255) not null,
+        phone varchar(255),
+        role varchar(255) not null check (role in ('ADMIN','USER','VIEWER')),
+        status varchar(255) not null check (status in ('ACTIVE','SUSPENDED','INACTIVE')),
+        username varchar(255) not null unique,
+        primary key (id)
+    )
+2025-07-12 03:19:16 - 
+    alter table if exists singtel_app.bandwidth_changes 
+       add constraint FKphxhif2jjrqu9lieuyx52que4 
+       foreign key (service_instance_id) 
+       references singtel_app.service_instances
+Hibernate: 
+    alter table if exists singtel_app.bandwidth_changes 
+       add constraint FKphxhif2jjrqu9lieuyx52que4 
+       foreign key (service_instance_id) 
+       references singtel_app.service_instances
+2025-07-12 03:19:16 - 
+    alter table if exists singtel_app.bandwidth_changes 
+       add constraint FK28nd02kyos4t7lh0v8kcekug5 
+       foreign key (user_id) 
+       references singtel_app.users
+Hibernate: 
+    alter table if exists singtel_app.bandwidth_changes 
+       add constraint FK28nd02kyos4t7lh0v8kcekug5 
+       foreign key (user_id) 
+       references singtel_app.users
+2025-07-12 03:19:16 - 
+    alter table if exists singtel_app.orders 
+       add constraint FK1vldikbqexeu85qvsedncxvs3 
+       foreign key (company_id) 
+       references singtel_app.companies
+Hibernate: 
+    alter table if exists singtel_app.orders 
+       add constraint FK1vldikbqexeu85qvsedncxvs3 
+       foreign key (company_id) 
+       references singtel_app.companies
+2025-07-12 03:19:16 - 
+    alter table if exists singtel_app.orders 
+       add constraint FKj7bkj6q0u3681uv3bvq21316i 
+       foreign key (service_id) 
+       references singtel_app.services
+Hibernate: 
+    alter table if exists singtel_app.orders 
+       add constraint FKj7bkj6q0u3681uv3bvq21316i 
+       foreign key (service_id) 
+       references singtel_app.services
+2025-07-12 03:19:16 - 
+    alter table if exists singtel_app.orders 
+       add constraint FKrhawop2o9fmjl9a74grq767sb 
+       foreign key (service_instance_id) 
+       references singtel_app.service_instances
+Hibernate: 
+    alter table if exists singtel_app.orders 
+       add constraint FKrhawop2o9fmjl9a74grq767sb 
+       foreign key (service_instance_id) 
+       references singtel_app.service_instances
+2025-07-12 03:19:16 - 
+    alter table if exists singtel_app.orders 
+       add constraint FK32ql8ubntj5uh44ph9659tiih 
+       foreign key (user_id) 
+       references singtel_app.users
+Hibernate: 
+    alter table if exists singtel_app.orders 
+       add constraint FK32ql8ubntj5uh44ph9659tiih 
+       foreign key (user_id) 
+       references singtel_app.users
+2025-07-12 03:19:16 - 
+    alter table if exists singtel_app.service_instances 
+       add constraint FKfgoj8d6fdavbtq97989ay4l5l 
+       foreign key (company_id) 
+       references singtel_app.companies
+Hibernate: 
+    alter table if exists singtel_app.service_instances 
+       add constraint FKfgoj8d6fdavbtq97989ay4l5l 
+       foreign key (company_id) 
+       references singtel_app.companies
+2025-07-12 03:19:16 - 
+    alter table if exists singtel_app.service_instances 
+       add constraint FKguvw7g804iujk1276dy213sve 
+       foreign key (service_id) 
+       references singtel_app.services
+Hibernate: 
+    alter table if exists singtel_app.service_instances 
+       add constraint FKguvw7g804iujk1276dy213sve 
+       foreign key (service_id) 
+       references singtel_app.services
+2025-07-12 03:19:16 - 
+    alter table if exists singtel_app.services 
+       add constraint FKfffr4emayc2n4uq3yv618d9j0 
+       foreign key (category_id) 
+       references singtel_app.service_categories
+Hibernate: 
+    alter table if exists singtel_app.services 
+       add constraint FKfffr4emayc2n4uq3yv618d9j0 
+       foreign key (category_id) 
+       references singtel_app.service_categories
+2025-07-12 03:19:16 - 
+    alter table if exists singtel_app.users 
+       add constraint FKin8gn4o1hpiwe6qe4ey7ykwq7 
+       foreign key (company_id) 
+       references singtel_app.companies
+Hibernate: 
+    alter table if exists singtel_app.users 
+       add constraint FKin8gn4o1hpiwe6qe4ey7ykwq7 
+       foreign key (company_id) 
+       references singtel_app.companies
+2025-07-12 03:19:16 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-12 03:19:16 - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-07-12 03:19:17 - 32 mappings in 'requestMappingHandlerMapping'
+2025-07-12 03:19:17 - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2025-07-12 03:19:17 - Exposing 3 endpoint(s) beneath base path '/actuator'
+2025-07-12 03:19:17 - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2c9a5a1b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5665b26f, org.springframework.security.web.context.SecurityContextHolderFilter@7d686953, org.springframework.security.web.header.HeaderWriterFilter@6eeff2dc, org.springframework.web.filter.CorsFilter@747f6990, org.springframework.security.web.authentication.logout.LogoutFilter@5fe11c40, com.singtel.network.security.JwtAuthenticationFilter@114c2c2b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5f98b31, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@28aee12e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@62ececb1, org.springframework.security.web.session.SessionManagementFilter@3df3c0c0, org.springframework.security.web.access.ExceptionTranslationFilter@6ca4ebef, org.springframework.security.web.access.intercept.AuthorizationFilter@30beb104]
+2025-07-12 03:19:17 - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-07-12 03:19:17 - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-07-12 03:19:18 - Filter 'webMvcObservationFilter' configured for use
+2025-07-12 03:19:18 - Filter 'jwtAuthenticationFilter' configured for use
+2025-07-12 03:19:18 - Initializing Spring TestDispatcherServlet ''
+2025-07-12 03:19:18 - Initializing Servlet ''
+2025-07-12 03:19:18 - Completed initialization in 1 ms
+2025-07-12 03:19:18 - Started NetworkOnDemandApplicationTests in 6.582 seconds (process running for 7.154)
+2025-07-12 03:19:18 - 
+    select
+        u1_0.id,
+        u1_0.company_id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.last_login_at,
+        u1_0.last_name,
+        u1_0.password_changed_at,
+        u1_0.password_hash,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.status,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        singtel_app.users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.company_id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.last_login_at,
+        u1_0.last_name,
+        u1_0.password_changed_at,
+        u1_0.password_hash,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.status,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        singtel_app.users u1_0
+2025-07-12 03:19:18 - 
+    select
+        c1_0.id,
+        c1_0.address,
+        c1_0.company_size,
+        c1_0.country,
+        c1_0.created_at,
+        c1_0.email,
+        c1_0.industry,
+        c1_0.name,
+        c1_0.phone,
+        c1_0.postal_code,
+        c1_0.registration_number,
+        c1_0.status,
+        c1_0.updated_at 
+    from
+        singtel_app.companies c1_0
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.address,
+        c1_0.company_size,
+        c1_0.country,
+        c1_0.created_at,
+        c1_0.email,
+        c1_0.industry,
+        c1_0.name,
+        c1_0.phone,
+        c1_0.postal_code,
+        c1_0.registration_number,
+        c1_0.status,
+        c1_0.updated_at 
+    from
+        singtel_app.companies c1_0
+2025-07-12 03:19:18 - JDBC URL to connect to 'dataSource': url='jdbc:postgresql://localhost:35943/nukxggiuxbzv?user=postgres&password=docker', scope='NetworkOnDemandApplicationTests#invalidCredentials_Rejected'
+2025-07-12 03:19:18 - Securing POST /auth/login
+2025-07-12 03:19:18 - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-12 03:19:18 - Secured POST /auth/login
+2025-07-12 03:19:18 - Mapped to com.singtel.network.controller.AuthController#login(LoginRequest)
+2025-07-12 03:19:18 - Read "application/json;charset=UTF-8" to [LoginRequest{usernameOrEmail='testuser', rememberMe=false}]
+2025-07-12 03:19:18 - Login attempt for user: testuser
+2025-07-12 03:19:18 - Attempting to authenticate user: testuser
+2025-07-12 03:19:18 - Loading user by username or email: testuser
+2025-07-12 03:19:19 - 
+    insert 
+    into
+        singtel_app.companies
+        (address, company_size, country, created_at, email, industry, name, phone, postal_code, registration_number, status, updated_at, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        singtel_app.companies
+        (address, company_size, country, created_at, email, industry, name, phone, postal_code, registration_number, status, updated_at, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-07-12 03:19:19 - 
+    insert 
+    into
+        singtel_app.users
+        (company_id, created_at, email, first_name, last_login_at, last_name, password_changed_at, password_hash, phone, role, status, updated_at, username, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        singtel_app.users
+        (company_id, created_at, email, first_name, last_login_at, last_name, password_changed_at, password_hash, phone, role, status, updated_at, username, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-07-12 03:19:19 - 
+    select
+        u1_0.id,
+        u1_0.company_id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.last_login_at,
+        u1_0.last_name,
+        u1_0.password_changed_at,
+        u1_0.password_hash,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.status,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        singtel_app.users u1_0 
+    where
+        u1_0.username=? 
+        or u1_0.email=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.company_id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.last_login_at,
+        u1_0.last_name,
+        u1_0.password_changed_at,
+        u1_0.password_hash,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.status,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        singtel_app.users u1_0 
+    where
+        u1_0.username=? 
+        or u1_0.email=?
+2025-07-12 03:19:19 - User found: testuser with role: ADMIN and status: ACTIVE
+2025-07-12 03:19:19 - Failed to authenticate since password does not match stored value
+2025-07-12 03:19:19 - Authentication failed for user: testuser
+org.springframework.security.authentication.BadCredentialsException: Bad credentials
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.additionalAuthenticationChecks(DaoAuthenticationProvider.java:89)
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:147)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:182)
+	at com.singtel.network.service.AuthService.authenticateUser(AuthService.java:49)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:352)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:385)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:765)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:717)
+	at com.singtel.network.service.AuthService$$SpringCGLIB$$0.authenticateUser(<generated>)
+	at com.singtel.network.controller.AuthController.login(AuthController.java:33)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:352)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:713)
+	at com.singtel.network.controller.AuthController$$SpringCGLIB$$0.login(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:254)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:182)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:917)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:829)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at org.springframework.test.web.servlet.TestDispatcherServlet.service(TestDispatcherServlet.java:72)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.springframework.mock.web.MockFilterChain$ServletFilterProxy.doFilter(MockFilterChain.java:165)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:132)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.springframework.test.web.servlet.setup.MockMvcFilterDecorator.doFilter(MockMvcFilterDecorator.java:151)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:132)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.ObservationFilterChainDecorator$FilterObservation$SimpleFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:479)
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:340)
+	at org.springframework.security.web.ObservationFilterChainDecorator.lambda$wrapSecured$0(ObservationFilterChainDecorator.java:82)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:128)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at com.singtel.network.security.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:57)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$0(ObservationFilterChainDecorator.java:323)
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:224)
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
+	at org.springframework.test.web.servlet.setup.MockMvcFilterDecorator.doFilter(MockMvcFilterDecorator.java:151)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:132)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.test.web.servlet.setup.MockMvcFilterDecorator.doFilter(MockMvcFilterDecorator.java:151)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:132)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.test.web.servlet.setup.MockMvcFilterDecorator.doFilter(MockMvcFilterDecorator.java:151)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:132)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.test.web.servlet.setup.MockMvcFilterDecorator.doFilter(MockMvcFilterDecorator.java:151)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:132)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.test.web.servlet.setup.MockMvcFilterDecorator.doFilter(MockMvcFilterDecorator.java:151)
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:132)
+	at org.springframework.test.web.servlet.MockMvc.perform(MockMvc.java:201)
+	at com.singtel.network.NetworkOnDemandApplicationTests.invalidCredentials_Rejected(NetworkOnDemandApplicationTests.java:166)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:218)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:214)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:139)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+2025-07-12 03:19:19 - Using @ExceptionHandler com.singtel.network.exception.GlobalExceptionHandler#handleAuthenticationException(Exception, WebRequest)
+2025-07-12 03:19:19 - Authentication error: Invalid username/email or password
+2025-07-12 03:19:19 - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-07-12 03:19:19 - Writing [com.singtel.network.exception.GlobalExceptionHandler$ErrorResponse@70eb0c2c]
+2025-07-12 03:19:19 - Resolved [org.springframework.security.authentication.BadCredentialsException: Invalid username/email or password]
+]]></system-out>
+  </testcase>
+  <testcase name="orderEndpoints_RequireAuthentication" classname="com.singtel.network.NetworkOnDemandApplicationTests" time="0.264">
+    <system-out><![CDATA[2025-07-12 03:19:19 - 
+    select
+        u1_0.id,
+        u1_0.company_id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.last_login_at,
+        u1_0.last_name,
+        u1_0.password_changed_at,
+        u1_0.password_hash,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.status,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        singtel_app.users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.company_id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.last_login_at,
+        u1_0.last_name,
+        u1_0.password_changed_at,
+        u1_0.password_hash,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.status,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        singtel_app.users u1_0
+2025-07-12 03:19:19 - 
+    select
+        c1_0.id,
+        c1_0.address,
+        c1_0.company_size,
+        c1_0.country,
+        c1_0.created_at,
+        c1_0.email,
+        c1_0.industry,
+        c1_0.name,
+        c1_0.phone,
+        c1_0.postal_code,
+        c1_0.registration_number,
+        c1_0.status,
+        c1_0.updated_at 
+    from
+        singtel_app.companies c1_0
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.address,
+        c1_0.company_size,
+        c1_0.country,
+        c1_0.created_at,
+        c1_0.email,
+        c1_0.industry,
+        c1_0.name,
+        c1_0.phone,
+        c1_0.postal_code,
+        c1_0.registration_number,
+        c1_0.status,
+        c1_0.updated_at 
+    from
+        singtel_app.companies c1_0
+2025-07-12 03:19:19 - JDBC URL to connect to 'dataSource': url='jdbc:postgresql://localhost:35943/nukxggiuxbzv?user=postgres&password=docker', scope='NetworkOnDemandApplicationTests#orderEndpoints_RequireAuthentication'
+2025-07-12 03:19:19 - Securing POST /auth/login
+2025-07-12 03:19:19 - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-12 03:19:19 - Secured POST /auth/login
+2025-07-12 03:19:19 - Mapped to com.singtel.network.controller.AuthController#login(LoginRequest)
+2025-07-12 03:19:19 - Read "application/json;charset=UTF-8" to [LoginRequest{usernameOrEmail='testuser', rememberMe=false}]
+2025-07-12 03:19:19 - Login attempt for user: testuser
+2025-07-12 03:19:19 - Attempting to authenticate user: testuser
+2025-07-12 03:19:19 - Loading user by username or email: testuser
+2025-07-12 03:19:19 - 
+    insert 
+    into
+        singtel_app.companies
+        (address, company_size, country, created_at, email, industry, name, phone, postal_code, registration_number, status, updated_at, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        singtel_app.companies
+        (address, company_size, country, created_at, email, industry, name, phone, postal_code, registration_number, status, updated_at, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-07-12 03:19:19 - 
+    insert 
+    into
+        singtel_app.users
+        (company_id, created_at, email, first_name, last_login_at, last_name, password_changed_at, password_hash, phone, role, status, updated_at, username, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        singtel_app.users
+        (company_id, created_at, email, first_name, last_login_at, last_name, password_changed_at, password_hash, phone, role, status, updated_at, username, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-07-12 03:19:19 - 
+    select
+        u1_0.id,
+        u1_0.company_id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.last_login_at,
+        u1_0.last_name,
+        u1_0.password_changed_at,
+        u1_0.password_hash,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.status,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        singtel_app.users u1_0 
+    where
+        u1_0.username=? 
+        or u1_0.email=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.company_id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.last_login_at,
+        u1_0.last_name,
+        u1_0.password_changed_at,
+        u1_0.password_hash,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.status,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        singtel_app.users u1_0 
+    where
+        u1_0.username=? 
+        or u1_0.email=?
+2025-07-12 03:19:19 - User found: testuser with role: ADMIN and status: ACTIVE
+2025-07-12 03:19:19 - Authenticated user
+2025-07-12 03:19:19 - User authenticated successfully: testuser
+2025-07-12 03:19:19 - Login successful for user: testuser
+2025-07-12 03:19:19 - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-07-12 03:19:19 - Writing [JwtAuthenticationResponse{tokenType='Bearer', expiresIn=3599639, user=UserProfileResponse{id=dff3373 (truncated)...]
+2025-07-12 03:19:19 - Securing GET /orders
+2025-07-12 03:19:19 - Loading user by username or email: testuser
+2025-07-12 03:19:19 - 
+    update
+        singtel_app.users 
+    set
+        company_id=?,
+        email=?,
+        first_name=?,
+        last_login_at=?,
+        last_name=?,
+        password_changed_at=?,
+        password_hash=?,
+        phone=?,
+        role=?,
+        status=?,
+        updated_at=?,
+        username=? 
+    where
+        id=?
+Hibernate: 
+    update
+        singtel_app.users 
+    set
+        company_id=?,
+        email=?,
+        first_name=?,
+        last_login_at=?,
+        last_name=?,
+        password_changed_at=?,
+        password_hash=?,
+        phone=?,
+        role=?,
+        status=?,
+        updated_at=?,
+        username=? 
+    where
+        id=?
+2025-07-12 03:19:19 - 
+    select
+        u1_0.id,
+        u1_0.company_id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.last_login_at,
+        u1_0.last_name,
+        u1_0.password_changed_at,
+        u1_0.password_hash,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.status,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        singtel_app.users u1_0 
+    where
+        u1_0.username=? 
+        or u1_0.email=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.company_id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.last_login_at,
+        u1_0.last_name,
+        u1_0.password_changed_at,
+        u1_0.password_hash,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.status,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        singtel_app.users u1_0 
+    where
+        u1_0.username=? 
+        or u1_0.email=?
+2025-07-12 03:19:19 - User found: testuser with role: ADMIN and status: ACTIVE
+2025-07-12 03:19:19 - Set authentication for user: testuser
+2025-07-12 03:19:19 - Secured GET /orders
+2025-07-12 03:19:19 - Mapped to com.singtel.network.controller.OrderController#getCompanyOrders()
+2025-07-12 03:19:19 - Authorizing method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.singtel.network.controller.OrderController.getCompanyOrders(); target is of class [com.singtel.network.controller.OrderController]
+2025-07-12 03:19:19 - Authorized method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.singtel.network.controller.OrderController.getCompanyOrders(); target is of class [com.singtel.network.controller.OrderController]
+2025-07-12 03:19:19 - Fetching orders for current user's company
+2025-07-12 03:19:19 - Fetching orders for company: 078b1b5b-d2a7-4d5a-88d1-73182481c852
+2025-07-12 03:19:19 - 
+    select
+        o1_0.id,
+        o1_0.actual_completion_date,
+        o1_0.company_id,
+        o1_0.contact_email,
+        o1_0.contact_person,
+        o1_0.contact_phone,
+        o1_0.created_at,
+        o1_0.estimated_completion_date,
+        o1_0.installation_address,
+        o1_0.notes,
+        o1_0.order_number,
+        o1_0.order_type,
+        o1_0.postal_code,
+        o1_0.requested_bandwidth_mbps,
+        o1_0.requested_date,
+        o1_0.service_id,
+        o1_0.service_instance_id,
+        o1_0.status,
+        o1_0.total_cost,
+        o1_0.updated_at,
+        o1_0.user_id,
+        o1_0.workflow_id 
+    from
+        singtel_app.orders o1_0 
+    where
+        o1_0.company_id=?
+Hibernate: 
+    select
+        o1_0.id,
+        o1_0.actual_completion_date,
+        o1_0.company_id,
+        o1_0.contact_email,
+        o1_0.contact_person,
+        o1_0.contact_phone,
+        o1_0.created_at,
+        o1_0.estimated_completion_date,
+        o1_0.installation_address,
+        o1_0.notes,
+        o1_0.order_number,
+        o1_0.order_type,
+        o1_0.postal_code,
+        o1_0.requested_bandwidth_mbps,
+        o1_0.requested_date,
+        o1_0.service_id,
+        o1_0.service_instance_id,
+        o1_0.status,
+        o1_0.total_cost,
+        o1_0.updated_at,
+        o1_0.user_id,
+        o1_0.workflow_id 
+    from
+        singtel_app.orders o1_0 
+    where
+        o1_0.company_id=?
+2025-07-12 03:19:19 - Retrieved 0 orders
+2025-07-12 03:19:19 - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-07-12 03:19:19 - Writing [[]]
+2025-07-12 03:19:19 - Securing GET /orders/statistics
+2025-07-12 03:19:19 - Loading user by username or email: testuser
+2025-07-12 03:19:19 - 
+    select
+        u1_0.id,
+        u1_0.company_id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.last_login_at,
+        u1_0.last_name,
+        u1_0.password_changed_at,
+        u1_0.password_hash,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.status,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        singtel_app.users u1_0 
+    where
+        u1_0.username=? 
+        or u1_0.email=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.company_id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.last_login_at,
+        u1_0.last_name,
+        u1_0.password_changed_at,
+        u1_0.password_hash,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.status,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        singtel_app.users u1_0 
+    where
+        u1_0.username=? 
+        or u1_0.email=?
+2025-07-12 03:19:19 - User found: testuser with role: ADMIN and status: ACTIVE
+2025-07-12 03:19:19 - Set authentication for user: testuser
+2025-07-12 03:19:19 - Secured GET /orders/statistics
+2025-07-12 03:19:19 - Mapped to com.singtel.network.controller.OrderController#getOrderStatistics()
+2025-07-12 03:19:19 - Authorizing method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.singtel.network.controller.OrderController.getOrderStatistics(); target is of class [com.singtel.network.controller.OrderController]
+2025-07-12 03:19:19 - Authorized method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.singtel.network.controller.OrderController.getOrderStatistics(); target is of class [com.singtel.network.controller.OrderController]
+2025-07-12 03:19:19 - Fetching order statistics
+2025-07-12 03:19:19 - Calculating total order value for company: 078b1b5b-d2a7-4d5a-88d1-73182481c852
+2025-07-12 03:19:19 - 
+    select
+        coalesce(sum(o1_0.total_cost), 0) 
+    from
+        singtel_app.orders o1_0 
+    where
+        o1_0.company_id=? 
+        and o1_0.status='COMPLETED'
+Hibernate: 
+    select
+        coalesce(sum(o1_0.total_cost), 0) 
+    from
+        singtel_app.orders o1_0 
+    where
+        o1_0.company_id=? 
+        and o1_0.status='COMPLETED'
+2025-07-12 03:19:19 - Fetching pending orders for company: 078b1b5b-d2a7-4d5a-88d1-73182481c852
+2025-07-12 03:19:19 - 
+    select
+        o1_0.id,
+        o1_0.actual_completion_date,
+        o1_0.company_id,
+        o1_0.contact_email,
+        o1_0.contact_person,
+        o1_0.contact_phone,
+        o1_0.created_at,
+        o1_0.estimated_completion_date,
+        o1_0.installation_address,
+        o1_0.notes,
+        o1_0.order_number,
+        o1_0.order_type,
+        o1_0.postal_code,
+        o1_0.requested_bandwidth_mbps,
+        o1_0.requested_date,
+        o1_0.service_id,
+        o1_0.service_instance_id,
+        o1_0.status,
+        o1_0.total_cost,
+        o1_0.updated_at,
+        o1_0.user_id,
+        o1_0.workflow_id 
+    from
+        singtel_app.orders o1_0 
+    where
+        o1_0.company_id=? 
+        and o1_0.status in ('SUBMITTED', 'APPROVED', 'IN_PROGRESS')
+Hibernate: 
+    select
+        o1_0.id,
+        o1_0.actual_completion_date,
+        o1_0.company_id,
+        o1_0.contact_email,
+        o1_0.contact_person,
+        o1_0.contact_phone,
+        o1_0.created_at,
+        o1_0.estimated_completion_date,
+        o1_0.installation_address,
+        o1_0.notes,
+        o1_0.order_number,
+        o1_0.order_type,
+        o1_0.postal_code,
+        o1_0.requested_bandwidth_mbps,
+        o1_0.requested_date,
+        o1_0.service_id,
+        o1_0.service_instance_id,
+        o1_0.status,
+        o1_0.total_cost,
+        o1_0.updated_at,
+        o1_0.user_id,
+        o1_0.workflow_id 
+    from
+        singtel_app.orders o1_0 
+    where
+        o1_0.company_id=? 
+        and o1_0.status in ('SUBMITTED', 'APPROVED', 'IN_PROGRESS')
+2025-07-12 03:19:19 - Fetching recent orders for company: 078b1b5b-d2a7-4d5a-88d1-73182481c852 with limit: 5
+2025-07-12 03:19:19 - 
+    select
+        o1_0.id,
+        o1_0.actual_completion_date,
+        o1_0.company_id,
+        o1_0.contact_email,
+        o1_0.contact_person,
+        o1_0.contact_phone,
+        o1_0.created_at,
+        o1_0.estimated_completion_date,
+        o1_0.installation_address,
+        o1_0.notes,
+        o1_0.order_number,
+        o1_0.order_type,
+        o1_0.postal_code,
+        o1_0.requested_bandwidth_mbps,
+        o1_0.requested_date,
+        o1_0.service_id,
+        o1_0.service_instance_id,
+        o1_0.status,
+        o1_0.total_cost,
+        o1_0.updated_at,
+        o1_0.user_id,
+        o1_0.workflow_id 
+    from
+        singtel_app.orders o1_0 
+    where
+        o1_0.company_id=? 
+    order by
+        o1_0.created_at desc 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        o1_0.id,
+        o1_0.actual_completion_date,
+        o1_0.company_id,
+        o1_0.contact_email,
+        o1_0.contact_person,
+        o1_0.contact_phone,
+        o1_0.created_at,
+        o1_0.estimated_completion_date,
+        o1_0.installation_address,
+        o1_0.notes,
+        o1_0.order_number,
+        o1_0.order_type,
+        o1_0.postal_code,
+        o1_0.requested_bandwidth_mbps,
+        o1_0.requested_date,
+        o1_0.service_id,
+        o1_0.service_instance_id,
+        o1_0.status,
+        o1_0.total_cost,
+        o1_0.updated_at,
+        o1_0.user_id,
+        o1_0.workflow_id 
+    from
+        singtel_app.orders o1_0 
+    where
+        o1_0.company_id=? 
+    order by
+        o1_0.created_at desc 
+    offset
+        ? rows 
+    fetch
+        first ? rows only
+2025-07-12 03:19:19 - Retrieved order statistics - Total value: 0, Pending: 0
+2025-07-12 03:19:19 - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-07-12 03:19:19 - Writing [{pendingOrdersCount=0, totalOrderValue=0, recentOrdersCount=0, currency=SGD}]
+]]></system-out>
+  </testcase>
+  <testcase name="authenticationFlow_Success" classname="com.singtel.network.NetworkOnDemandApplicationTests" time="0.214">
+    <system-out><![CDATA[2025-07-12 03:19:19 - 
+    select
+        u1_0.id,
+        u1_0.company_id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.last_login_at,
+        u1_0.last_name,
+        u1_0.password_changed_at,
+        u1_0.password_hash,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.status,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        singtel_app.users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.company_id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.last_login_at,
+        u1_0.last_name,
+        u1_0.password_changed_at,
+        u1_0.password_hash,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.status,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        singtel_app.users u1_0
+2025-07-12 03:19:19 - 
+    select
+        c1_0.id,
+        c1_0.address,
+        c1_0.company_size,
+        c1_0.country,
+        c1_0.created_at,
+        c1_0.email,
+        c1_0.industry,
+        c1_0.name,
+        c1_0.phone,
+        c1_0.postal_code,
+        c1_0.registration_number,
+        c1_0.status,
+        c1_0.updated_at 
+    from
+        singtel_app.companies c1_0
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.address,
+        c1_0.company_size,
+        c1_0.country,
+        c1_0.created_at,
+        c1_0.email,
+        c1_0.industry,
+        c1_0.name,
+        c1_0.phone,
+        c1_0.postal_code,
+        c1_0.registration_number,
+        c1_0.status,
+        c1_0.updated_at 
+    from
+        singtel_app.companies c1_0
+2025-07-12 03:19:19 - JDBC URL to connect to 'dataSource': url='jdbc:postgresql://localhost:35943/nukxggiuxbzv?user=postgres&password=docker', scope='NetworkOnDemandApplicationTests#authenticationFlow_Success'
+2025-07-12 03:19:19 - Securing POST /auth/login
+2025-07-12 03:19:19 - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-12 03:19:19 - Secured POST /auth/login
+2025-07-12 03:19:19 - Mapped to com.singtel.network.controller.AuthController#login(LoginRequest)
+2025-07-12 03:19:19 - Read "application/json;charset=UTF-8" to [LoginRequest{usernameOrEmail='testuser', rememberMe=false}]
+2025-07-12 03:19:19 - Login attempt for user: testuser
+2025-07-12 03:19:19 - Attempting to authenticate user: testuser
+2025-07-12 03:19:19 - Loading user by username or email: testuser
+2025-07-12 03:19:19 - 
+    insert 
+    into
+        singtel_app.companies
+        (address, company_size, country, created_at, email, industry, name, phone, postal_code, registration_number, status, updated_at, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        singtel_app.companies
+        (address, company_size, country, created_at, email, industry, name, phone, postal_code, registration_number, status, updated_at, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-07-12 03:19:19 - 
+    insert 
+    into
+        singtel_app.users
+        (company_id, created_at, email, first_name, last_login_at, last_name, password_changed_at, password_hash, phone, role, status, updated_at, username, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        singtel_app.users
+        (company_id, created_at, email, first_name, last_login_at, last_name, password_changed_at, password_hash, phone, role, status, updated_at, username, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-07-12 03:19:19 - 
+    select
+        u1_0.id,
+        u1_0.company_id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.last_login_at,
+        u1_0.last_name,
+        u1_0.password_changed_at,
+        u1_0.password_hash,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.status,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        singtel_app.users u1_0 
+    where
+        u1_0.username=? 
+        or u1_0.email=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.company_id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.last_login_at,
+        u1_0.last_name,
+        u1_0.password_changed_at,
+        u1_0.password_hash,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.status,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        singtel_app.users u1_0 
+    where
+        u1_0.username=? 
+        or u1_0.email=?
+2025-07-12 03:19:19 - User found: testuser with role: ADMIN and status: ACTIVE
+2025-07-12 03:19:19 - Authenticated user
+2025-07-12 03:19:19 - User authenticated successfully: testuser
+2025-07-12 03:19:19 - Login successful for user: testuser
+2025-07-12 03:19:19 - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-07-12 03:19:19 - Writing [JwtAuthenticationResponse{tokenType='Bearer', expiresIn=3599392, user=UserProfileResponse{id=b216db9 (truncated)...]
+2025-07-12 03:19:19 - Securing GET /auth/me
+2025-07-12 03:19:19 - Loading user by username or email: testuser
+2025-07-12 03:19:19 - 
+    update
+        singtel_app.users 
+    set
+        company_id=?,
+        email=?,
+        first_name=?,
+        last_login_at=?,
+        last_name=?,
+        password_changed_at=?,
+        password_hash=?,
+        phone=?,
+        role=?,
+        status=?,
+        updated_at=?,
+        username=? 
+    where
+        id=?
+Hibernate: 
+    update
+        singtel_app.users 
+    set
+        company_id=?,
+        email=?,
+        first_name=?,
+        last_login_at=?,
+        last_name=?,
+        password_changed_at=?,
+        password_hash=?,
+        phone=?,
+        role=?,
+        status=?,
+        updated_at=?,
+        username=? 
+    where
+        id=?
+2025-07-12 03:19:19 - 
+    select
+        u1_0.id,
+        u1_0.company_id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.last_login_at,
+        u1_0.last_name,
+        u1_0.password_changed_at,
+        u1_0.password_hash,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.status,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        singtel_app.users u1_0 
+    where
+        u1_0.username=? 
+        or u1_0.email=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.company_id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.last_login_at,
+        u1_0.last_name,
+        u1_0.password_changed_at,
+        u1_0.password_hash,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.status,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        singtel_app.users u1_0 
+    where
+        u1_0.username=? 
+        or u1_0.email=?
+2025-07-12 03:19:19 - User found: testuser with role: ADMIN and status: ACTIVE
+2025-07-12 03:19:19 - Set authentication for user: testuser
+2025-07-12 03:19:19 - Secured GET /auth/me
+2025-07-12 03:19:19 - Mapped to com.singtel.network.controller.AuthController#getCurrentUser()
+2025-07-12 03:19:19 - Authorizing method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.singtel.network.controller.AuthController.getCurrentUser(); target is of class [com.singtel.network.controller.AuthController]
+2025-07-12 03:19:19 - Authorized method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.singtel.network.controller.AuthController.getCurrentUser(); target is of class [com.singtel.network.controller.AuthController]
+2025-07-12 03:19:19 - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-07-12 03:19:19 - Writing [UserProfileResponse{id=b216db9d-4bb2-48eb-8b38-c1d8abe3f7a2, username='testuser', email='test@exampl (truncated)...]
+2025-07-12 03:19:19 - Securing GET /services/categories
+2025-07-12 03:19:19 - Loading user by username or email: testuser
+2025-07-12 03:19:19 - 
+    select
+        u1_0.id,
+        u1_0.company_id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.last_login_at,
+        u1_0.last_name,
+        u1_0.password_changed_at,
+        u1_0.password_hash,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.status,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        singtel_app.users u1_0 
+    where
+        u1_0.username=? 
+        or u1_0.email=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.company_id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.last_login_at,
+        u1_0.last_name,
+        u1_0.password_changed_at,
+        u1_0.password_hash,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.status,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        singtel_app.users u1_0 
+    where
+        u1_0.username=? 
+        or u1_0.email=?
+2025-07-12 03:19:19 - User found: testuser with role: ADMIN and status: ACTIVE
+2025-07-12 03:19:19 - Set authentication for user: testuser
+2025-07-12 03:19:19 - Secured GET /services/categories
+2025-07-12 03:19:19 - Mapped to com.singtel.network.controller.ServiceCatalogController#getAllCategories()
+2025-07-12 03:19:19 - Authorizing method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.singtel.network.controller.ServiceCatalogController.getAllCategories(); target is of class [com.singtel.network.controller.ServiceCatalogController]
+2025-07-12 03:19:19 - Authorized method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.singtel.network.controller.ServiceCatalogController.getAllCategories(); target is of class [com.singtel.network.controller.ServiceCatalogController]
+2025-07-12 03:19:19 - Fetching all service categories
+2025-07-12 03:19:19 - Fetching all active service categories
+2025-07-12 03:19:19 - 
+    select
+        sc1_0.id,
+        sc1_0.created_at,
+        sc1_0.description,
+        sc1_0.display_order,
+        sc1_0.is_active,
+        sc1_0.name,
+        sc1_0.updated_at 
+    from
+        singtel_app.service_categories sc1_0 
+    where
+        sc1_0.is_active=true 
+    order by
+        sc1_0.display_order,
+        sc1_0.name
+Hibernate: 
+    select
+        sc1_0.id,
+        sc1_0.created_at,
+        sc1_0.description,
+        sc1_0.display_order,
+        sc1_0.is_active,
+        sc1_0.name,
+        sc1_0.updated_at 
+    from
+        singtel_app.service_categories sc1_0 
+    where
+        sc1_0.is_active=true 
+    order by
+        sc1_0.display_order,
+        sc1_0.name
+2025-07-12 03:19:19 - Retrieved 0 service categories
+2025-07-12 03:19:19 - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-07-12 03:19:19 - Writing [[]]
+2025-07-12 03:19:19 - Securing POST /auth/logout
+2025-07-12 03:19:19 - Loading user by username or email: testuser
+2025-07-12 03:19:19 - 
+    select
+        u1_0.id,
+        u1_0.company_id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.last_login_at,
+        u1_0.last_name,
+        u1_0.password_changed_at,
+        u1_0.password_hash,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.status,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        singtel_app.users u1_0 
+    where
+        u1_0.username=? 
+        or u1_0.email=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.company_id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.last_login_at,
+        u1_0.last_name,
+        u1_0.password_changed_at,
+        u1_0.password_hash,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.status,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        singtel_app.users u1_0 
+    where
+        u1_0.username=? 
+        or u1_0.email=?
+2025-07-12 03:19:19 - User found: testuser with role: ADMIN and status: ACTIVE
+2025-07-12 03:19:19 - Set authentication for user: testuser
+2025-07-12 03:19:19 - Secured POST /auth/logout
+2025-07-12 03:19:19 - Mapped to com.singtel.network.controller.AuthController#logout()
+2025-07-12 03:19:19 - Authorizing method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.singtel.network.controller.AuthController.logout(); target is of class [com.singtel.network.controller.AuthController]
+2025-07-12 03:19:19 - Authorized method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.singtel.network.controller.AuthController.logout(); target is of class [com.singtel.network.controller.AuthController]
+2025-07-12 03:19:19 - User logged out: testuser
+2025-07-12 03:19:19 - User logout successful
+2025-07-12 03:19:19 - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-07-12 03:19:19 - Writing [{message=Logout successful}]
+]]></system-out>
+  </testcase>
+  <testcase name="validationErrors_Handled" classname="com.singtel.network.NetworkOnDemandApplicationTests" time="0.098">
+    <system-out><![CDATA[2025-07-12 03:19:19 - 
+    select
+        u1_0.id,
+        u1_0.company_id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.last_login_at,
+        u1_0.last_name,
+        u1_0.password_changed_at,
+        u1_0.password_hash,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.status,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        singtel_app.users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.company_id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.last_login_at,
+        u1_0.last_name,
+        u1_0.password_changed_at,
+        u1_0.password_hash,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.status,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        singtel_app.users u1_0
+2025-07-12 03:19:19 - 
+    select
+        c1_0.id,
+        c1_0.address,
+        c1_0.company_size,
+        c1_0.country,
+        c1_0.created_at,
+        c1_0.email,
+        c1_0.industry,
+        c1_0.name,
+        c1_0.phone,
+        c1_0.postal_code,
+        c1_0.registration_number,
+        c1_0.status,
+        c1_0.updated_at 
+    from
+        singtel_app.companies c1_0
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.address,
+        c1_0.company_size,
+        c1_0.country,
+        c1_0.created_at,
+        c1_0.email,
+        c1_0.industry,
+        c1_0.name,
+        c1_0.phone,
+        c1_0.postal_code,
+        c1_0.registration_number,
+        c1_0.status,
+        c1_0.updated_at 
+    from
+        singtel_app.companies c1_0
+2025-07-12 03:19:19 - JDBC URL to connect to 'dataSource': url='jdbc:postgresql://localhost:35943/nukxggiuxbzv?user=postgres&password=docker', scope='NetworkOnDemandApplicationTests#validationErrors_Handled'
+2025-07-12 03:19:19 - Securing POST /auth/login
+2025-07-12 03:19:19 - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-12 03:19:19 - Secured POST /auth/login
+2025-07-12 03:19:19 - Mapped to com.singtel.network.controller.AuthController#login(LoginRequest)
+2025-07-12 03:19:19 - Read "application/json;charset=UTF-8" to [LoginRequest{usernameOrEmail='', rememberMe=false}]
+2025-07-12 03:19:19 - Using @ExceptionHandler com.singtel.network.exception.GlobalExceptionHandler#handleValidationExceptions(MethodArgumentNotValidException, WebRequest)
+2025-07-12 03:19:19 - Validation error: {password=Password must be between 6 and 100 characters, usernameOrEmail=Username or email must be between 3 and 255 characters}
+2025-07-12 03:19:19 - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-07-12 03:19:19 - Writing [com.singtel.network.exception.GlobalExceptionHandler$ErrorResponse@69d5078d]
+2025-07-12 03:19:19 - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.singtel.network.dto.auth.JwtAuthenticationResponse> com.singtel.network.controller.AuthController.login(com.singtel.network.dto.auth.LoginRequest) with 3 errors: [Field error in object 'loginRequest' on field 'usernameOrEmail': rejected value []; codes [NotBlank.loginRequest.usernameOrEmail,NotBlank.usernameOrEmail,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [loginRequest.usernameOrEmail,usernameOrEmail]; arguments []; default message [usernameOrEmail]]; default message [Username or email is required]] [Field error in object 'loginRequest' on field 'usernameOrEmail': rejected value []; codes [Size.loginRequest.usernameOrEmail,Size.usernameOrEmail,Size.java.lang.String,Size]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [loginRequest.usernameOrEmail,usernameOrEmail]; arguments []; default message [usernameOrEmail],255,3]; default message [Username or email must be between 3 and 255 characters]] [Field error in object 'loginRequest' on field 'password': rejected value [123]; codes [Size.loginRequest.password,Size.password,Size.java.lang.String,Size]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [loginRequest.password,password]; arguments []; default message [password],100,6]; default message [Password must be between 6 and 100 characters]] ]
+]]></system-out>
+  </testcase>
+  <testcase name="unauthorizedAccess_Denied" classname="com.singtel.network.NetworkOnDemandApplicationTests" time="0.1">
+    <system-out><![CDATA[2025-07-12 03:19:19 - 
+    select
+        u1_0.id,
+        u1_0.company_id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.last_login_at,
+        u1_0.last_name,
+        u1_0.password_changed_at,
+        u1_0.password_hash,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.status,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        singtel_app.users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.company_id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.last_login_at,
+        u1_0.last_name,
+        u1_0.password_changed_at,
+        u1_0.password_hash,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.status,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        singtel_app.users u1_0
+2025-07-12 03:19:19 - 
+    select
+        c1_0.id,
+        c1_0.address,
+        c1_0.company_size,
+        c1_0.country,
+        c1_0.created_at,
+        c1_0.email,
+        c1_0.industry,
+        c1_0.name,
+        c1_0.phone,
+        c1_0.postal_code,
+        c1_0.registration_number,
+        c1_0.status,
+        c1_0.updated_at 
+    from
+        singtel_app.companies c1_0
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.address,
+        c1_0.company_size,
+        c1_0.country,
+        c1_0.created_at,
+        c1_0.email,
+        c1_0.industry,
+        c1_0.name,
+        c1_0.phone,
+        c1_0.postal_code,
+        c1_0.registration_number,
+        c1_0.status,
+        c1_0.updated_at 
+    from
+        singtel_app.companies c1_0
+2025-07-12 03:19:19 - JDBC URL to connect to 'dataSource': url='jdbc:postgresql://localhost:35943/nukxggiuxbzv?user=postgres&password=docker', scope='NetworkOnDemandApplicationTests#unauthorizedAccess_Denied'
+2025-07-12 03:19:19 - Securing GET /auth/me
+2025-07-12 03:19:19 - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-12 03:19:19 - Unauthorized error: Full authentication is required to access this resource
+2025-07-12 03:19:19 - Securing GET /services/categories
+2025-07-12 03:19:19 - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-12 03:19:19 - Unauthorized error: Full authentication is required to access this resource
+2025-07-12 03:19:19 - Securing GET /orders
+2025-07-12 03:19:19 - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-12 03:19:19 - Unauthorized error: Full authentication is required to access this resource
+]]></system-out>
+  </testcase>
+  <testcase name="contextLoads" classname="com.singtel.network.NetworkOnDemandApplicationTests" time="0.09">
+    <system-out><![CDATA[2025-07-12 03:19:19 - 
+    select
+        u1_0.id,
+        u1_0.company_id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.last_login_at,
+        u1_0.last_name,
+        u1_0.password_changed_at,
+        u1_0.password_hash,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.status,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        singtel_app.users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.company_id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.last_login_at,
+        u1_0.last_name,
+        u1_0.password_changed_at,
+        u1_0.password_hash,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.status,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        singtel_app.users u1_0
+2025-07-12 03:19:19 - 
+    select
+        c1_0.id,
+        c1_0.address,
+        c1_0.company_size,
+        c1_0.country,
+        c1_0.created_at,
+        c1_0.email,
+        c1_0.industry,
+        c1_0.name,
+        c1_0.phone,
+        c1_0.postal_code,
+        c1_0.registration_number,
+        c1_0.status,
+        c1_0.updated_at 
+    from
+        singtel_app.companies c1_0
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.address,
+        c1_0.company_size,
+        c1_0.country,
+        c1_0.created_at,
+        c1_0.email,
+        c1_0.industry,
+        c1_0.name,
+        c1_0.phone,
+        c1_0.postal_code,
+        c1_0.registration_number,
+        c1_0.status,
+        c1_0.updated_at 
+    from
+        singtel_app.companies c1_0
+2025-07-12 03:19:19 - JDBC URL to connect to 'dataSource': url='jdbc:postgresql://localhost:35943/nukxggiuxbzv?user=postgres&password=docker', scope='NetworkOnDemandApplicationTests#contextLoads'
+]]></system-out>
+  </testcase>
+  <testcase name="healthEndpoints_Accessible" classname="com.singtel.network.NetworkOnDemandApplicationTests" time="0.105">
+    <system-out><![CDATA[2025-07-12 03:19:19 - 
+    select
+        u1_0.id,
+        u1_0.company_id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.last_login_at,
+        u1_0.last_name,
+        u1_0.password_changed_at,
+        u1_0.password_hash,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.status,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        singtel_app.users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.company_id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.last_login_at,
+        u1_0.last_name,
+        u1_0.password_changed_at,
+        u1_0.password_hash,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.status,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        singtel_app.users u1_0
+2025-07-12 03:19:19 - 
+    select
+        c1_0.id,
+        c1_0.address,
+        c1_0.company_size,
+        c1_0.country,
+        c1_0.created_at,
+        c1_0.email,
+        c1_0.industry,
+        c1_0.name,
+        c1_0.phone,
+        c1_0.postal_code,
+        c1_0.registration_number,
+        c1_0.status,
+        c1_0.updated_at 
+    from
+        singtel_app.companies c1_0
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.address,
+        c1_0.company_size,
+        c1_0.country,
+        c1_0.created_at,
+        c1_0.email,
+        c1_0.industry,
+        c1_0.name,
+        c1_0.phone,
+        c1_0.postal_code,
+        c1_0.registration_number,
+        c1_0.status,
+        c1_0.updated_at 
+    from
+        singtel_app.companies c1_0
+2025-07-12 03:19:20 - JDBC URL to connect to 'dataSource': url='jdbc:postgresql://localhost:35943/nukxggiuxbzv?user=postgres&password=docker', scope='NetworkOnDemandApplicationTests#healthEndpoints_Accessible'
+2025-07-12 03:19:20 - Securing GET /auth/health
+2025-07-12 03:19:20 - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-12 03:19:20 - Secured GET /auth/health
+2025-07-12 03:19:20 - Mapped to com.singtel.network.controller.AuthController#health()
+2025-07-12 03:19:20 - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-07-12 03:19:20 - Writing [{service=Authentication Service, timestamp=2025-07-12T03:19:20.024191, status=UP}]
+2025-07-12 03:19:20 - Securing GET /actuator/health
+2025-07-12 03:19:20 - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-12 03:19:20 - Secured GET /actuator/health
+2025-07-12 03:19:20 - Read "application/octet-stream" to []
+2025-07-12 03:19:20 - Using 'application/vnd.spring-boot.actuator.v3+json', given [*/*] and supported [application/vnd.spring-boot.actuator.v3+json, application/vnd.spring-boot.actuator.v2+json, application/json]
+2025-07-12 03:19:20 - Writing [org.springframework.boot.actuate.health.SystemHealth@4ec9c424]
+]]></system-out>
+  </testcase>
+  <testcase name="serviceCatalogEndpoints_RequireAuthentication" classname="com.singtel.network.NetworkOnDemandApplicationTests" time="0.208">
+    <system-out><![CDATA[2025-07-12 03:19:20 - 
+    select
+        u1_0.id,
+        u1_0.company_id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.last_login_at,
+        u1_0.last_name,
+        u1_0.password_changed_at,
+        u1_0.password_hash,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.status,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        singtel_app.users u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.company_id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.last_login_at,
+        u1_0.last_name,
+        u1_0.password_changed_at,
+        u1_0.password_hash,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.status,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        singtel_app.users u1_0
+2025-07-12 03:19:20 - 
+    select
+        c1_0.id,
+        c1_0.address,
+        c1_0.company_size,
+        c1_0.country,
+        c1_0.created_at,
+        c1_0.email,
+        c1_0.industry,
+        c1_0.name,
+        c1_0.phone,
+        c1_0.postal_code,
+        c1_0.registration_number,
+        c1_0.status,
+        c1_0.updated_at 
+    from
+        singtel_app.companies c1_0
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.address,
+        c1_0.company_size,
+        c1_0.country,
+        c1_0.created_at,
+        c1_0.email,
+        c1_0.industry,
+        c1_0.name,
+        c1_0.phone,
+        c1_0.postal_code,
+        c1_0.registration_number,
+        c1_0.status,
+        c1_0.updated_at 
+    from
+        singtel_app.companies c1_0
+2025-07-12 03:19:20 - JDBC URL to connect to 'dataSource': url='jdbc:postgresql://localhost:35943/nukxggiuxbzv?user=postgres&password=docker', scope='NetworkOnDemandApplicationTests#serviceCatalogEndpoints_RequireAuthentication'
+2025-07-12 03:19:20 - Securing POST /auth/login
+2025-07-12 03:19:20 - Set SecurityContextHolder to anonymous SecurityContext
+2025-07-12 03:19:20 - Secured POST /auth/login
+2025-07-12 03:19:20 - Mapped to com.singtel.network.controller.AuthController#login(LoginRequest)
+2025-07-12 03:19:20 - Read "application/json;charset=UTF-8" to [LoginRequest{usernameOrEmail='testuser', rememberMe=false}]
+2025-07-12 03:19:20 - Login attempt for user: testuser
+2025-07-12 03:19:20 - Attempting to authenticate user: testuser
+2025-07-12 03:19:20 - Loading user by username or email: testuser
+2025-07-12 03:19:20 - 
+    insert 
+    into
+        singtel_app.companies
+        (address, company_size, country, created_at, email, industry, name, phone, postal_code, registration_number, status, updated_at, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        singtel_app.companies
+        (address, company_size, country, created_at, email, industry, name, phone, postal_code, registration_number, status, updated_at, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-07-12 03:19:20 - 
+    insert 
+    into
+        singtel_app.users
+        (company_id, created_at, email, first_name, last_login_at, last_name, password_changed_at, password_hash, phone, role, status, updated_at, username, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        singtel_app.users
+        (company_id, created_at, email, first_name, last_login_at, last_name, password_changed_at, password_hash, phone, role, status, updated_at, username, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-07-12 03:19:20 - 
+    select
+        u1_0.id,
+        u1_0.company_id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.last_login_at,
+        u1_0.last_name,
+        u1_0.password_changed_at,
+        u1_0.password_hash,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.status,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        singtel_app.users u1_0 
+    where
+        u1_0.username=? 
+        or u1_0.email=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.company_id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.last_login_at,
+        u1_0.last_name,
+        u1_0.password_changed_at,
+        u1_0.password_hash,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.status,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        singtel_app.users u1_0 
+    where
+        u1_0.username=? 
+        or u1_0.email=?
+2025-07-12 03:19:20 - User found: testuser with role: ADMIN and status: ACTIVE
+2025-07-12 03:19:20 - Authenticated user
+2025-07-12 03:19:20 - User authenticated successfully: testuser
+2025-07-12 03:19:20 - Login successful for user: testuser
+2025-07-12 03:19:20 - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-07-12 03:19:20 - Writing [JwtAuthenticationResponse{tokenType='Bearer', expiresIn=3599783, user=UserProfileResponse{id=2e4b033 (truncated)...]
+2025-07-12 03:19:20 - Securing GET /services/categories
+2025-07-12 03:19:20 - Loading user by username or email: testuser
+2025-07-12 03:19:20 - 
+    update
+        singtel_app.users 
+    set
+        company_id=?,
+        email=?,
+        first_name=?,
+        last_login_at=?,
+        last_name=?,
+        password_changed_at=?,
+        password_hash=?,
+        phone=?,
+        role=?,
+        status=?,
+        updated_at=?,
+        username=? 
+    where
+        id=?
+Hibernate: 
+    update
+        singtel_app.users 
+    set
+        company_id=?,
+        email=?,
+        first_name=?,
+        last_login_at=?,
+        last_name=?,
+        password_changed_at=?,
+        password_hash=?,
+        phone=?,
+        role=?,
+        status=?,
+        updated_at=?,
+        username=? 
+    where
+        id=?
+2025-07-12 03:19:20 - 
+    select
+        u1_0.id,
+        u1_0.company_id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.last_login_at,
+        u1_0.last_name,
+        u1_0.password_changed_at,
+        u1_0.password_hash,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.status,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        singtel_app.users u1_0 
+    where
+        u1_0.username=? 
+        or u1_0.email=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.company_id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.last_login_at,
+        u1_0.last_name,
+        u1_0.password_changed_at,
+        u1_0.password_hash,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.status,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        singtel_app.users u1_0 
+    where
+        u1_0.username=? 
+        or u1_0.email=?
+2025-07-12 03:19:20 - User found: testuser with role: ADMIN and status: ACTIVE
+2025-07-12 03:19:20 - Set authentication for user: testuser
+2025-07-12 03:19:20 - Secured GET /services/categories
+2025-07-12 03:19:20 - Mapped to com.singtel.network.controller.ServiceCatalogController#getAllCategories()
+2025-07-12 03:19:20 - Authorizing method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.singtel.network.controller.ServiceCatalogController.getAllCategories(); target is of class [com.singtel.network.controller.ServiceCatalogController]
+2025-07-12 03:19:20 - Authorized method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.singtel.network.controller.ServiceCatalogController.getAllCategories(); target is of class [com.singtel.network.controller.ServiceCatalogController]
+2025-07-12 03:19:20 - Fetching all service categories
+2025-07-12 03:19:20 - Fetching all active service categories
+2025-07-12 03:19:20 - 
+    select
+        sc1_0.id,
+        sc1_0.created_at,
+        sc1_0.description,
+        sc1_0.display_order,
+        sc1_0.is_active,
+        sc1_0.name,
+        sc1_0.updated_at 
+    from
+        singtel_app.service_categories sc1_0 
+    where
+        sc1_0.is_active=true 
+    order by
+        sc1_0.display_order,
+        sc1_0.name
+Hibernate: 
+    select
+        sc1_0.id,
+        sc1_0.created_at,
+        sc1_0.description,
+        sc1_0.display_order,
+        sc1_0.is_active,
+        sc1_0.name,
+        sc1_0.updated_at 
+    from
+        singtel_app.service_categories sc1_0 
+    where
+        sc1_0.is_active=true 
+    order by
+        sc1_0.display_order,
+        sc1_0.name
+2025-07-12 03:19:20 - Retrieved 0 service categories
+2025-07-12 03:19:20 - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-07-12 03:19:20 - Writing [[]]
+2025-07-12 03:19:20 - Securing GET /services
+2025-07-12 03:19:20 - Loading user by username or email: testuser
+2025-07-12 03:19:20 - 
+    select
+        u1_0.id,
+        u1_0.company_id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.last_login_at,
+        u1_0.last_name,
+        u1_0.password_changed_at,
+        u1_0.password_hash,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.status,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        singtel_app.users u1_0 
+    where
+        u1_0.username=? 
+        or u1_0.email=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.company_id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.last_login_at,
+        u1_0.last_name,
+        u1_0.password_changed_at,
+        u1_0.password_hash,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.status,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        singtel_app.users u1_0 
+    where
+        u1_0.username=? 
+        or u1_0.email=?
+2025-07-12 03:19:20 - User found: testuser with role: ADMIN and status: ACTIVE
+2025-07-12 03:19:20 - Set authentication for user: testuser
+2025-07-12 03:19:20 - Secured GET /services
+2025-07-12 03:19:20 - Mapped to com.singtel.network.controller.ServiceCatalogController#getAllServices()
+2025-07-12 03:19:20 - Authorizing method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.singtel.network.controller.ServiceCatalogController.getAllServices(); target is of class [com.singtel.network.controller.ServiceCatalogController]
+2025-07-12 03:19:20 - Authorized method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.singtel.network.controller.ServiceCatalogController.getAllServices(); target is of class [com.singtel.network.controller.ServiceCatalogController]
+2025-07-12 03:19:20 - Fetching all available services
+2025-07-12 03:19:20 - Fetching all available services
+2025-07-12 03:19:20 - 
+    select
+        s1_0.id,
+        s1_0.base_bandwidth_mbps,
+        s1_0.base_price_monthly,
+        s1_0.category_id,
+        s1_0.contract_term_months,
+        s1_0.created_at,
+        s1_0.description,
+        s1_0.features,
+        s1_0.is_available,
+        s1_0.is_bandwidth_adjustable,
+        s1_0.max_bandwidth_mbps,
+        s1_0.min_bandwidth_mbps,
+        s1_0.name,
+        s1_0.price_per_mbps,
+        s1_0.provisioning_time_hours,
+        s1_0.service_type,
+        s1_0.setup_fee,
+        s1_0.technical_specs,
+        s1_0.updated_at 
+    from
+        singtel_app.services s1_0 
+    where
+        s1_0.is_available=true
+Hibernate: 
+    select
+        s1_0.id,
+        s1_0.base_bandwidth_mbps,
+        s1_0.base_price_monthly,
+        s1_0.category_id,
+        s1_0.contract_term_months,
+        s1_0.created_at,
+        s1_0.description,
+        s1_0.features,
+        s1_0.is_available,
+        s1_0.is_bandwidth_adjustable,
+        s1_0.max_bandwidth_mbps,
+        s1_0.min_bandwidth_mbps,
+        s1_0.name,
+        s1_0.price_per_mbps,
+        s1_0.provisioning_time_hours,
+        s1_0.service_type,
+        s1_0.setup_fee,
+        s1_0.technical_specs,
+        s1_0.updated_at 
+    from
+        singtel_app.services s1_0 
+    where
+        s1_0.is_available=true
+2025-07-12 03:19:20 - Retrieved 0 available services
+2025-07-12 03:19:20 - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-07-12 03:19:20 - Writing [[]]
+2025-07-12 03:19:20 - Securing GET /services/types
+2025-07-12 03:19:20 - Loading user by username or email: testuser
+2025-07-12 03:19:20 - 
+    select
+        u1_0.id,
+        u1_0.company_id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.last_login_at,
+        u1_0.last_name,
+        u1_0.password_changed_at,
+        u1_0.password_hash,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.status,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        singtel_app.users u1_0 
+    where
+        u1_0.username=? 
+        or u1_0.email=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.company_id,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.first_name,
+        u1_0.last_login_at,
+        u1_0.last_name,
+        u1_0.password_changed_at,
+        u1_0.password_hash,
+        u1_0.phone,
+        u1_0.role,
+        u1_0.status,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        singtel_app.users u1_0 
+    where
+        u1_0.username=? 
+        or u1_0.email=?
+2025-07-12 03:19:20 - User found: testuser with role: ADMIN and status: ACTIVE
+2025-07-12 03:19:20 - Set authentication for user: testuser
+2025-07-12 03:19:20 - Secured GET /services/types
+2025-07-12 03:19:20 - Mapped to com.singtel.network.controller.ServiceCatalogController#getServiceTypes()
+2025-07-12 03:19:20 - Authorizing method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.singtel.network.controller.ServiceCatalogController.getServiceTypes(); target is of class [com.singtel.network.controller.ServiceCatalogController]
+2025-07-12 03:19:20 - Authorized method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.singtel.network.controller.ServiceCatalogController.getServiceTypes(); target is of class [com.singtel.network.controller.ServiceCatalogController]
+2025-07-12 03:19:20 - Fetching service types
+2025-07-12 03:19:20 - Fetching distinct service types
+2025-07-12 03:19:20 - 
+    select
+        distinct s1_0.service_type 
+    from
+        singtel_app.services s1_0 
+    where
+        s1_0.is_available=true 
+    order by
+        s1_0.service_type
+Hibernate: 
+    select
+        distinct s1_0.service_type 
+    from
+        singtel_app.services s1_0 
+    where
+        s1_0.is_available=true 
+    order by
+        s1_0.service_type
+2025-07-12 03:19:20 - Retrieved 0 service types
+2025-07-12 03:19:20 - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2025-07-12 03:19:20 - Writing [[]]
+]]></system-out>
+  </testcase>
+</testsuite>
