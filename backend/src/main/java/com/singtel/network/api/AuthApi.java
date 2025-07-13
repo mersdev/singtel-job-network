@@ -9,6 +9,7 @@ import io.swagger.v3.oas.annotations.media.ExampleObject;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
@@ -95,7 +96,7 @@ public interface AuthApi {
                     ))
     })
     ResponseEntity<JwtAuthenticationResponse> login(
-        @Valid @RequestBody(
+        @Valid @RequestBody @io.swagger.v3.oas.annotations.parameters.RequestBody(
             content = @Content(
                 schema = @Schema(implementation = LoginRequest.class),
                 examples = {
@@ -168,7 +169,7 @@ public interface AuthApi {
                     ))
     })
     ResponseEntity<JwtAuthenticationResponse> refreshToken(
-        @RequestBody(
+        @RequestBody @io.swagger.v3.oas.annotations.parameters.RequestBody(
             content = @Content(
                 examples = @ExampleObject(
                     name = "Refresh Token Request",
@@ -186,6 +187,7 @@ public interface AuthApi {
      */
     @GetMapping("/me")
     @PreAuthorize("hasRole('USER') or hasRole('ADMIN') or hasRole('VIEWER')")
+    @SecurityRequirement(name = "bearerAuth")
     @Operation(summary = "Get current user profile", description = "Get profile information of the authenticated user")
     @ApiResponses(value = {
         @ApiResponse(responseCode = "200", description = "User profile retrieved successfully",
@@ -243,10 +245,34 @@ public interface AuthApi {
      */
     @PostMapping("/logout")
     @PreAuthorize("hasRole('USER') or hasRole('ADMIN') or hasRole('VIEWER')")
+    @SecurityRequirement(name = "bearerAuth")
     @Operation(summary = "User logout", description = "Logout user and invalidate session")
     @ApiResponses(value = {
-        @ApiResponse(responseCode = "200", description = "Logout successful"),
-        @ApiResponse(responseCode = "401", description = "User not authenticated")
+        @ApiResponse(responseCode = "200", description = "Logout successful",
+                    content = @Content(
+                        examples = @ExampleObject(
+                            name = "Logout Success",
+                            value = """
+                                {
+                                  "message": "Logout successful"
+                                }
+                                """
+                        )
+                    )),
+        @ApiResponse(responseCode = "401", description = "User not authenticated",
+                    content = @Content(
+                        examples = @ExampleObject(
+                            name = "Unauthorized Logout",
+                            value = """
+                                {
+                                  "path": "/auth/logout",
+                                  "error": "Unauthorized",
+                                  "message": "Access denied. Please provide valid authentication credentials.",
+                                  "timestamp": "2024-07-12T03:27:35.207436"
+                                }
+                                """
+                        )
+                    ))
     })
     ResponseEntity<Map<String, String>> logout();
 
@@ -255,6 +281,18 @@ public interface AuthApi {
      */
     @GetMapping("/health")
     @Operation(summary = "Authentication service health check", description = "Check if authentication service is running")
-    @ApiResponse(responseCode = "200", description = "Service is healthy")
+    @ApiResponse(responseCode = "200", description = "Service is healthy",
+                content = @Content(
+                    examples = @ExampleObject(
+                        name = "Health Check Response",
+                        value = """
+                            {
+                              "timestamp": "2024-07-12T03:27:35.207436",
+                              "status": "UP",
+                              "service": "Authentication Service"
+                            }
+                            """
+                    )
+                ))
     ResponseEntity<Map<String, String>> health();
 }

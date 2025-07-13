@@ -10,6 +10,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -201,7 +202,7 @@ public class ServiceCatalogService {
     }
 
     /**
-     * Search services with multiple criteria
+     * Search services with multiple criteria using programmatic filtering to avoid PostgreSQL parameter type issues
      */
     public Page<ServiceSummaryResponse> searchServices(UUID categoryId, String serviceType,
                                                       BigDecimal minPrice, BigDecimal maxPrice,
@@ -209,9 +210,58 @@ public class ServiceCatalogService {
                                                       Boolean bandwidthAdjustable, Pageable pageable) {
         logger.debug("Searching services with criteria - Category: {}, Type: {}, Price: {}-{}, Bandwidth: {}-{}, Adjustable: {}",
                     categoryId, serviceType, minPrice, maxPrice, minBandwidth, maxBandwidth, bandwidthAdjustable);
-        
-        Page<com.singtel.network.entity.Service> services = serviceRepository.searchServices(categoryId, serviceType, minPrice, maxPrice,
-                                                                 minBandwidth, maxBandwidth, bandwidthAdjustable, pageable);
+
+        // Check if any search criteria is provided
+        boolean hasSearchCriteria = categoryId != null || serviceType != null ||
+                                  minPrice != null || maxPrice != null ||
+                                  minBandwidth != null || maxBandwidth != null ||
+                                  bandwidthAdjustable != null;
+
+        Page<com.singtel.network.entity.Service> services;
+        if (!hasSearchCriteria) {
+            // No search criteria provided, return all available services
+            logger.debug("No search criteria provided, returning all available services");
+            services = serviceRepository.findAvailableServices(pageable);
+        } else {
+            // Use specific queries based on the criteria to avoid complex parameter handling
+            logger.debug("Using specific search criteria to filter services");
+
+            if (minPrice != null && maxPrice != null && categoryId == null && serviceType == null &&
+                minBandwidth == null && maxBandwidth == null && bandwidthAdjustable == null) {
+                // Only price range search
+                List<com.singtel.network.entity.Service> priceFilteredServices = serviceRepository.findByPriceRange(minPrice, maxPrice)
+                    .stream()
+                    .skip(pageable.getOffset())
+                    .limit(pageable.getPageSize())
+                    .collect(Collectors.toList());
+
+                // Create a Page manually
+                long total = serviceRepository.findByPriceRange(minPrice, maxPrice).size();
+                services = new PageImpl<>(priceFilteredServices, pageable, total);
+            } else {
+                // For other complex searches, fall back to getting all available services and filter programmatically
+                List<com.singtel.network.entity.Service> allServices = serviceRepository.findAvailableServices();
+
+                List<com.singtel.network.entity.Service> filteredServices = allServices.stream()
+                    .filter(service -> categoryId == null || service.getCategory().getId().equals(categoryId))
+                    .filter(service -> serviceType == null || service.getServiceType().equals(serviceType))
+                    .filter(service -> minPrice == null || service.getBasePriceMonthly().compareTo(minPrice) >= 0)
+                    .filter(service -> maxPrice == null || service.getBasePriceMonthly().compareTo(maxPrice) <= 0)
+                    .filter(service -> minBandwidth == null || service.getBaseBandwidthMbps() >= minBandwidth)
+                    .filter(service -> maxBandwidth == null || service.getBaseBandwidthMbps() <= maxBandwidth)
+                    .filter(service -> bandwidthAdjustable == null || service.isBandwidthAdjustable() == bandwidthAdjustable)
+                    .collect(Collectors.toList());
+
+                // Apply pagination manually
+                int start = (int) pageable.getOffset();
+                int end = Math.min(start + pageable.getPageSize(), filteredServices.size());
+                List<com.singtel.network.entity.Service> pagedServices = filteredServices.subList(start, end);
+
+                services = new PageImpl<>(pagedServices, pageable, filteredServices.size());
+            }
+        }
+
+        logger.debug("Found {} services matching criteria", services.getTotalElements());
         return services.map(ServiceSummaryResponse::new);
     }
 

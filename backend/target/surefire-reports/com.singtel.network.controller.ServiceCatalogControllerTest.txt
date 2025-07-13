@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.singtel.network.controller.ServiceCatalogControllerTest
--------------------------------------------------------------------------------
-Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.192 s -- in com.singtel.network.controller.ServiceCatalogControllerTest

@@ -27,14 +27,15 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     public UserDetails loadUserByUsername(String usernameOrEmail) throws UsernameNotFoundException {
         logger.debug("Loading user by username or email: {}", usernameOrEmail);
 
-        User user = userRepository.findByUsernameOrEmail(usernameOrEmail)
+        User user = userRepository.findByUsernameOrEmailWithCompany(usernameOrEmail)
                 .orElseThrow(() -> {
                     logger.error("User not found with username or email: {}", usernameOrEmail);
                     return new UsernameNotFoundException("User not found with username or email: " + usernameOrEmail);
                 });
 
-        logger.debug("User found: {} with role: {} and status: {}", 
-                    user.getUsername(), user.getRole(), user.getStatus());
+        logger.debug("User found: {} with role: {} and status: {} and company: {}",
+                    user.getUsername(), user.getRole(), user.getStatus(),
+                    user.getCompany() != null ? user.getCompany().getName() : "null");
 
         return user;
     }

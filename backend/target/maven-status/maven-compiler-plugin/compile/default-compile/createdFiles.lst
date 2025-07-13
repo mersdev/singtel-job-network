@@ -35,6 +35,7 @@ com/singtel/network/security/SecurityConfig.class
 com/singtel/network/entity/User.class
 com/singtel/network/repository/CompanyRepository.class
 com/singtel/network/repository/ServiceRepository.class
+com/singtel/network/config/OpenApiConfig.class
 com/singtel/network/entity/ServiceInstance.class
 com/singtel/network/controller/AuthController.class
 com/singtel/network/exception/GlobalExceptionHandler$ErrorResponse.class

@@ -8,8 +8,8 @@
 /Users/BAORLIM/playground/singtel-job-network/backend/src/main/java/com/singtel/network/entity/Order.java
 /Users/BAORLIM/playground/singtel-job-network/backend/src/main/java/com/singtel/network/security/SecurityConfig.java
 /Users/BAORLIM/playground/singtel-job-network/backend/src/main/java/com/singtel/network/dto/order/OrderResponse.java
+/Users/BAORLIM/playground/singtel-job-network/backend/src/main/java/com/singtel/network/config/OpenApiConfig.java
 /Users/BAORLIM/playground/singtel-job-network/backend/src/main/java/com/singtel/network/repository/BandwidthChangeRepository.java
-/Users/BAORLIM/playground/singtel-job-network/backend/src/main/java/com/singtel/network/service/Context7Service.java
 /Users/BAORLIM/playground/singtel-job-network/backend/src/main/java/com/singtel/network/config/CorsProperties.java
 /Users/BAORLIM/playground/singtel-job-network/backend/src/main/java/com/singtel/network/entity/ServiceCategory.java
 /Users/BAORLIM/playground/singtel-job-network/backend/src/main/java/com/singtel/network/api/AuthApi.java

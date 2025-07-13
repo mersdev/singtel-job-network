@@ -1,0 +1,22 @@
+{
+  "testUser": {
+    "email": "jane.smith@techstart.sg",
+    "password": "password123",
+    "firstName": "Jane",
+    "lastName": "Smith",
+    "phone": "+65 9234 5678"
+  },
+  "adminUser": {
+    "email": "john.doe@techstart.sg",
+    "password": "password123",
+    "firstName": "John",
+    "lastName": "Doe",
+    "phone": "+65 9123 4567"
+  },
+  "updatedProfile": {
+    "firstName": "Updated",
+    "lastName": "Name",
+    "email": "updated@company.com",
+    "phone": "+65 8888 9999"
+  }
+}

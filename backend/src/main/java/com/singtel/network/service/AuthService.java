@@ -135,13 +135,45 @@ public class AuthService {
     @Transactional(readOnly = true)
     public UserProfileResponse getCurrentUser() {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        
+
         if (authentication == null || !authentication.isAuthenticated()) {
             throw new BadCredentialsException("No authenticated user found");
         }
 
-        User user = (User) authentication.getPrincipal();
-        return new UserProfileResponse(user);
+        try {
+            // Get the user from the authentication principal
+            Object principal = authentication.getPrincipal();
+
+            logger.debug("Authentication principal type: {}", principal.getClass().getName());
+
+            if (!(principal instanceof User)) {
+                logger.error("Authentication principal is not a User instance: {}", principal.getClass().getName());
+                throw new BadCredentialsException("Invalid authentication principal");
+            }
+
+            User user = (User) principal;
+            logger.debug("User from principal: {} (ID: {})", user.getUsername(), user.getId());
+
+            // Reload user from database to ensure all relationships are loaded
+            User fullUser = userRepository.findByIdWithCompany(user.getId())
+                .orElseThrow(() -> {
+                    logger.error("User not found in database with ID: {}", user.getId());
+                    return new BadCredentialsException("User not found in database");
+                });
+
+            logger.debug("Retrieved current user: {} with company: {}",
+                        fullUser.getUsername(),
+                        fullUser.getCompany() != null ? fullUser.getCompany().getName() : "null");
+
+            return new UserProfileResponse(fullUser);
+
+        } catch (ClassCastException e) {
+            logger.error("Failed to cast authentication principal to User", e);
+            throw new BadCredentialsException("Invalid authentication state");
+        } catch (Exception e) {
+            logger.error("Error retrieving current user", e);
+            throw new BadCredentialsException("Failed to retrieve user information");
+        }
     }
 
     /**

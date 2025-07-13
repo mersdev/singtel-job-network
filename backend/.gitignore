@@ -1,0 +1,326 @@
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+replay_pid*
+
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+# https://github.com/takari/maven-wrapper#usage-without-binary-jar
+.mvn/wrapper/maven-wrapper.jar
+
+# Gradle
+.gradle
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+
+# Eclipse
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# VS Code
+.vscode/
+
+# Mac
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Spring Boot
+spring-boot-*.log
+application-*.log
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# H2 Database
+*.h2.db
+*.trace.db
+*.lock.db
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Application specific
+application-local.yml
+application-local.properties
+application-secret.yml
+application-secret.properties
+
+# Test reports
+/test-results/
+/coverage/
+jacoco.exec
+*.exec
+
+# Logs
+logs/
+*.log.*
+*.out
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# JVM crash logs
+hs_err_pid*.log
+
+# Spring Boot DevTools
+.spring-boot-devtools.properties
+
+# Docker
+.dockerignore
+Dockerfile.local
+
+# Kubernetes
+k8s-local/
+*.local.yaml
+
+# Secrets and certificates
+*.pem
+*.key
+*.crt
+*.p12
+*.jks
+*.keystore
+*.truststore
+
+# IDE specific files
+.metadata
+.recommenders
+.project
+.classpath
+.settings/
+
+# STS (Spring Tool Suite)
+.apt_generated
+.factorypath
+.springBeans
+.sts4-cache
+
+# JRebel
+rebel.xml
+
+# Code coverage
+.nyc_output
+coverage/
+*.lcov
+
+# ESLint cache
+.eslintcache
+
+# Optional npm cache directory
+.npm
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# parcel-bundler cache (https://parceljs.org/)
+.cache
+.parcel-cache
+
+# next.js build output
+.next
+
+# nuxt.js build output
+.nuxt
+
+# vuepress build output
+.vuepress/dist
+
+# Serverless directories
+.serverless
+
+# FuseBox cache
+.fusebox/
+
+# DynamoDB Local files
+.dynamodb/
+
+# Local Netlify folder
+.netlify
+
+# Stores VSCode versions used for testing VSCode extensions
+.vscode-test
+
+# Application logs
+application.log*
+spring.log*
+
+# Flyway
+flyway.conf
+
+# JProfiler
+*.jprofiler
+
+# YourKit
+*.yourkit
+
+# JMeter
+*.jmx.log
+
+# Performance test results
+performance-test-results/
+
+# Local configuration overrides
+config/local/
+local.properties
+
+# Backup files
+*.bak
+*.backup
+
+# Archive files
+*.7z
+*.dmg
+*.gz
+*.iso
+*.rar
+*.tar
+*.zip
+
+# OS generated files
+.DS_Store?
+ehthumbs.db
+Icon?
+Thumbs.db
+
+# JetBrains IDEs
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# Eclipse IDE
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+.recommenders
+
+# External tool builders
+.externalToolBuilders/
+
+# Locally stored "Eclipse launch configurations"
+*.launch
+
+# PyDev specific (Python IDE for Eclipse)
+*.pydevproject
+
+# CDT-specific (C/C++ Development Tooling)
+.cproject
+
+# CDT- autotools
+.autotools
+
+# Java annotation processor (APT)
+.factorypath
+
+# PDT-specific (PHP Development Tools)
+.buildpath
+
+# sbteclipse plugin
+.target
+
+# Tern plugin
+.tern-project
+
+# TeXlipse plugin
+.texlipse
+
+# STS (Spring Tool Suite)
+.springBeans
+
+# Code Recommenders
+.recommenders/
+
+# Annotation Processing
+.apt_generated/
+.apt_generated_test/
+
+# Scala IDE specific (Scala & Java development for Eclipse)
+.cache-main
+.scala_dependencies
+.worksheet
+
+# Uncomment this line if you wish to ignore the project description file.
+# Typically, this file would be tracked if it contains build/dependency configurations:
+#.project

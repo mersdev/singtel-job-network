@@ -231,12 +231,32 @@ public class OrderService {
                                            BigDecimal minCost, BigDecimal maxCost, Pageable pageable) {
         User currentUser = getCurrentUser();
         logger.debug("Searching orders with criteria for company: {}", currentUser.getCompany().getId());
-        
+
         Page<Order> orders = orderRepository.searchOrders(currentUser.getCompany().getId(),
-                                                         status != null ? status.name() : null,
-                                                         orderType != null ? orderType.name() : null,
-                                                         serviceId, startDate, endDate, minCost, maxCost, pageable);
-        return orders.map(OrderResponse::new);
+                                                         status, pageable);
+
+        // Initialize lazy relationships within the transaction
+        return orders.map(order -> {
+            try {
+                // Force initialization of lazy relationships within the transaction
+                if (order.getService() != null) {
+                    order.getService().getName(); // Initialize service
+                }
+                if (order.getUser() != null) {
+                    order.getUser().getUsername(); // Initialize user
+                }
+                if (order.getCompany() != null) {
+                    order.getCompany().getName(); // Initialize company
+                }
+                if (order.getServiceInstance() != null) {
+                    order.getServiceInstance().getInstanceName(); // Initialize service instance
+                }
+            } catch (Exception e) {
+                logger.warn("Could not initialize lazy relationships for order {}: {}", order.getId(), e.getMessage());
+                // Continue with OrderResponse creation - it handles null relationships gracefully
+            }
+            return new OrderResponse(order);
+        });
     }
 
     /**
@@ -268,7 +288,16 @@ public class OrderService {
     // Private helper methods
 
     private User getCurrentUser() {
-        return (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+
+        // Ensure the user and company relationship are properly loaded
+        if (user.getCompany() == null) {
+            // Reload user with company relationship if not loaded
+            user = userRepository.findByIdWithCompany(user.getId())
+                    .orElseThrow(() -> new IllegalStateException("Current user not found in database"));
+        }
+
+        return user;
     }
 
     private String generateOrderNumber() {

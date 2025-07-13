@@ -1,0 +1,47 @@
+{
+  "sampleServices": [
+    {
+      "id": "1",
+      "name": "MPLS Network Service",
+      "category": "CONNECTIVITY",
+      "serviceType": "MPLS",
+      "description": "High-performance MPLS network connectivity for enterprise customers",
+      "basePrice": 500.00,
+      "isBandwidthAdjustable": true,
+      "features": ["24/7 Support", "SLA Guarantee", "Scalable Bandwidth"]
+    },
+    {
+      "id": "2", 
+      "name": "Internet Connectivity",
+      "category": "CONNECTIVITY",
+      "serviceType": "INTERNET",
+      "description": "High-speed internet connectivity with guaranteed bandwidth",
+      "basePrice": 200.00,
+      "isBandwidthAdjustable": true,
+      "features": ["High Speed", "Reliable Connection", "24/7 Support"]
+    },
+    {
+      "id": "3",
+      "name": "VPN Gateway",
+      "category": "SECURITY",
+      "serviceType": "VPN",
+      "description": "Secure VPN gateway for remote access and site-to-site connectivity",
+      "basePrice": 300.00,
+      "isBandwidthAdjustable": false,
+      "features": ["Secure Access", "Multiple Protocols", "Centralized Management"]
+    }
+  ],
+  "searchQueries": [
+    "MPLS",
+    "Internet",
+    "VPN",
+    "connectivity",
+    "security"
+  ],
+  "categories": [
+    "CONNECTIVITY",
+    "SECURITY",
+    "CLOUD",
+    "VOICE"
+  ]
+}

@@ -1,0 +1,105 @@
+# See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
+
+# Compiled output
+/dist
+/tmp
+/out-tsc
+/bazel-out
+
+# Node
+/node_modules
+npm-debug.log
+yarn-error.log
+
+# IDEs and editors
+.idea/
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+# Miscellaneous
+/.angular/cache
+.sass-cache/
+/connect.lock
+/coverage
+/libpeerconnection.log
+testem.log
+/typings
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Cypress
+cypress/videos/
+cypress/screenshots/
+cypress/downloads/
+
+# Test results
+test-results/
+playwright-report/
+test-results.xml
+coverage.xml
+
+# E2E test artifacts
+e2e/test-results/
+e2e/playwright-report/
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Local development
+local.json
+local.config.js
+local.config.ts
+
+# Backup files
+*.bak
+*.backup
+
+# Temporary directories
+temp/
+tmp/
+
+# Application specific
+src/environments/environment.local.ts
+src/environments/environment.secret.ts
+
+# Build artifacts
+build/
+out/
+
+# Package files
+*.tgz
+*.tar.gz
+
+# Storybook build outputs
+.out
+.storybook-out
+storybook-static
+
+# Local Netlify folder
+.netlify
+
+# Vercel
+.vercel
+
+# Firebase
+.firebase/
+firebase-debug.log
+firestore-debug.log

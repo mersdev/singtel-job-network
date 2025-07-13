@@ -37,6 +37,18 @@ public interface UserRepository extends JpaRepository<User, UUID> {
     Optional<User> findByUsernameOrEmail(@Param("usernameOrEmail") String usernameOrEmail);
 
     /**
+     * Find user by username or email with company relationship loaded
+     */
+    @Query("SELECT u FROM User u LEFT JOIN FETCH u.company WHERE u.username = :usernameOrEmail OR u.email = :usernameOrEmail")
+    Optional<User> findByUsernameOrEmailWithCompany(@Param("usernameOrEmail") String usernameOrEmail);
+
+    /**
+     * Find user by ID with company relationship loaded
+     */
+    @Query("SELECT u FROM User u LEFT JOIN FETCH u.company WHERE u.id = :id")
+    Optional<User> findByIdWithCompany(@Param("id") UUID id);
+
+    /**
      * Check if username exists
      */
     boolean existsByUsername(String username);

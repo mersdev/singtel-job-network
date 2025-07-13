@@ -411,8 +411,7 @@ class OrderRepositoryTest {
 
         // Act
         Page<Order> orderPage = orderRepository.searchOrders(
-                testCompany.getId(), "SUBMITTED", "NEW_SERVICE",
-                testService.getId(), null, null, null, null, pageable);
+                testCompany.getId(), Order.OrderStatus.SUBMITTED, pageable);
 
         // Assert
         assertNotNull(orderPage);

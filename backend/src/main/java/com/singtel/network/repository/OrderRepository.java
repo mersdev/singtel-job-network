@@ -3,6 +3,7 @@ package com.singtel.network.repository;
 import com.singtel.network.entity.Order;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.repository.EntityGraph;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -28,12 +29,14 @@ public interface OrderRepository extends JpaRepository<Order, UUID> {
     /**
      * Find orders by company ID
      */
-    List<Order> findByCompanyId(UUID companyId);
+    @Query("SELECT o FROM Order o LEFT JOIN FETCH o.service LEFT JOIN FETCH o.user LEFT JOIN FETCH o.company LEFT JOIN FETCH o.serviceInstance WHERE o.company.id = :companyId")
+    List<Order> findByCompanyId(@Param("companyId") UUID companyId);
 
     /**
      * Find orders by company ID with pagination
      */
-    Page<Order> findByCompanyId(UUID companyId, Pageable pageable);
+    @Query("SELECT o FROM Order o LEFT JOIN FETCH o.service LEFT JOIN FETCH o.user LEFT JOIN FETCH o.company LEFT JOIN FETCH o.serviceInstance WHERE o.company.id = :companyId")
+    Page<Order> findByCompanyId(@Param("companyId") UUID companyId, Pageable pageable);
 
     /**
      * Find orders by user ID
@@ -88,7 +91,7 @@ public interface OrderRepository extends JpaRepository<Order, UUID> {
     /**
      * Find pending orders by company
      */
-    @Query("SELECT o FROM Order o WHERE o.company.id = :companyId AND o.status IN ('SUBMITTED', 'APPROVED', 'IN_PROGRESS')")
+    @Query("SELECT o FROM Order o LEFT JOIN FETCH o.service LEFT JOIN FETCH o.user LEFT JOIN FETCH o.company LEFT JOIN FETCH o.serviceInstance WHERE o.company.id = :companyId AND o.status IN ('SUBMITTED', 'APPROVED', 'IN_PROGRESS')")
     List<Order> findPendingOrdersByCompany(@Param("companyId") UUID companyId);
 
     /**
@@ -191,30 +194,17 @@ public interface OrderRepository extends JpaRepository<Order, UUID> {
     /**
      * Find recent orders by company
      */
-    @Query("SELECT o FROM Order o WHERE o.company.id = :companyId ORDER BY o.createdAt DESC")
+    @Query("SELECT o FROM Order o LEFT JOIN FETCH o.service LEFT JOIN FETCH o.user LEFT JOIN FETCH o.company LEFT JOIN FETCH o.serviceInstance WHERE o.company.id = :companyId ORDER BY o.createdAt DESC")
     List<Order> findRecentOrdersByCompany(@Param("companyId") UUID companyId, Pageable pageable);
 
     /**
-     * Search orders with multiple criteria
+     * Search orders with multiple criteria (simple query for pagination compatibility)
      */
-    @Query(value = "SELECT * FROM singtel_app.orders o WHERE " +
-           "(CAST(:companyId AS uuid) IS NULL OR o.company_id = CAST(:companyId AS uuid)) AND " +
-           "(:status IS NULL OR o.status = :status) AND " +
-           "(:orderType IS NULL OR o.order_type = :orderType) AND " +
-           "(CAST(:serviceId AS uuid) IS NULL OR o.service_id = CAST(:serviceId AS uuid)) AND " +
-           "(CAST(:startDate AS date) IS NULL OR o.created_at >= CAST(:startDate AS date)) AND " +
-           "(CAST(:endDate AS date) IS NULL OR o.created_at <= CAST(:endDate AS date)) AND " +
-           "(CAST(:minCost AS numeric) IS NULL OR o.total_cost >= CAST(:minCost AS numeric)) AND " +
-           "(CAST(:maxCost AS numeric) IS NULL OR o.total_cost <= CAST(:maxCost AS numeric))",
-           nativeQuery = true)
+    @Query("SELECT o FROM Order o WHERE " +
+           "o.company.id = :companyId AND " +
+           "(:status IS NULL OR o.status = :status)")
     Page<Order> searchOrders(@Param("companyId") UUID companyId,
-                           @Param("status") String status,
-                           @Param("orderType") String orderType,
-                           @Param("serviceId") UUID serviceId,
-                           @Param("startDate") LocalDate startDate,
-                           @Param("endDate") LocalDate endDate,
-                           @Param("minCost") BigDecimal minCost,
-                           @Param("maxCost") BigDecimal maxCost,
+                           @Param("status") Order.OrderStatus status,
                            Pageable pageable);
 
     /**

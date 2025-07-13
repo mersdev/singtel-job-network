@@ -92,17 +92,28 @@ public interface ServiceRepository extends JpaRepository<Service, UUID> {
     List<Service> findByCategoryAndType(@Param("categoryId") UUID categoryId, @Param("serviceType") String serviceType);
 
     /**
-     * Search services with multiple criteria
+     * Search services with multiple criteria using native query to avoid PostgreSQL parameter type issues
      */
-    @Query("SELECT s FROM Service s WHERE " +
-           "(:categoryId IS NULL OR s.category.id = :categoryId) AND " +
-           "(:serviceType IS NULL OR s.serviceType = :serviceType) AND " +
-           "(:minPrice IS NULL OR s.basePriceMonthly >= :minPrice) AND " +
-           "(:maxPrice IS NULL OR s.basePriceMonthly <= :maxPrice) AND " +
-           "(:minBandwidth IS NULL OR s.baseBandwidthMbps >= :minBandwidth) AND " +
-           "(:maxBandwidth IS NULL OR s.baseBandwidthMbps <= :maxBandwidth) AND " +
-           "(:bandwidthAdjustable IS NULL OR s.isBandwidthAdjustable = :bandwidthAdjustable) AND " +
-           "s.isAvailable = true")
+    @Query(value = "SELECT * FROM singtel_app.services s WHERE " +
+           "(:categoryId::uuid IS NULL OR s.category_id = :categoryId::uuid) AND " +
+           "(:serviceType IS NULL OR s.service_type = :serviceType) AND " +
+           "(:minPrice::numeric IS NULL OR s.base_price_monthly >= :minPrice::numeric) AND " +
+           "(:maxPrice::numeric IS NULL OR s.base_price_monthly <= :maxPrice::numeric) AND " +
+           "(:minBandwidth::integer IS NULL OR s.base_bandwidth_mbps >= :minBandwidth::integer) AND " +
+           "(:maxBandwidth::integer IS NULL OR s.base_bandwidth_mbps <= :maxBandwidth::integer) AND " +
+           "(:bandwidthAdjustable::boolean IS NULL OR s.is_bandwidth_adjustable = :bandwidthAdjustable::boolean) AND " +
+           "s.is_available = true " +
+           "ORDER BY s.name",
+           countQuery = "SELECT COUNT(*) FROM singtel_app.services s WHERE " +
+           "(:categoryId::uuid IS NULL OR s.category_id = :categoryId::uuid) AND " +
+           "(:serviceType IS NULL OR s.service_type = :serviceType) AND " +
+           "(:minPrice::numeric IS NULL OR s.base_price_monthly >= :minPrice::numeric) AND " +
+           "(:maxPrice::numeric IS NULL OR s.base_price_monthly <= :maxPrice::numeric) AND " +
+           "(:minBandwidth::integer IS NULL OR s.base_bandwidth_mbps >= :minBandwidth::integer) AND " +
+           "(:maxBandwidth::integer IS NULL OR s.base_bandwidth_mbps <= :maxBandwidth::integer) AND " +
+           "(:bandwidthAdjustable::boolean IS NULL OR s.is_bandwidth_adjustable = :bandwidthAdjustable::boolean) AND " +
+           "s.is_available = true",
+           nativeQuery = true)
     Page<Service> searchServices(@Param("categoryId") UUID categoryId,
                                 @Param("serviceType") String serviceType,
                                 @Param("minPrice") BigDecimal minPrice,

@@ -139,20 +139,43 @@ public class ServiceCatalogController implements ServiceCatalogApi {
             @RequestParam(required = false) Integer maxBandwidth,
             @RequestParam(required = false) Boolean bandwidthAdjustable,
             @PageableDefault(size = 20) Pageable pageable) {
-        
-        logger.info("Searching services with criteria - Name: {}, Category: {}, Type: {}", name, categoryId, serviceType);
-        
-        Page<ServiceSummaryResponse> services;
-        if (name != null && !name.trim().isEmpty()) {
-            services = serviceCatalogService.searchServicesByName(name.trim(), pageable);
-        } else {
-            services = serviceCatalogService.searchServices(categoryId, serviceType, minPrice, maxPrice,
-                                                           minBandwidth, maxBandwidth, bandwidthAdjustable, pageable);
+
+        logger.info("Searching services with criteria - Name: {}, Category: {}, Type: {}, Price: {}-{}, Bandwidth: {}-{}, Adjustable: {}",
+                   name, categoryId, serviceType, minPrice, maxPrice, minBandwidth, maxBandwidth, bandwidthAdjustable);
+
+        try {
+            Page<ServiceSummaryResponse> services;
+
+            // Check if any search criteria is provided
+            boolean hasSearchCriteria = (name != null && !name.trim().isEmpty()) ||
+                                      categoryId != null ||
+                                      serviceType != null ||
+                                      minPrice != null ||
+                                      maxPrice != null ||
+                                      minBandwidth != null ||
+                                      maxBandwidth != null ||
+                                      bandwidthAdjustable != null;
+
+            if (!hasSearchCriteria) {
+                // No search criteria provided, return all available services
+                services = serviceCatalogService.getAllAvailableServices(pageable);
+            } else if (name != null && !name.trim().isEmpty()) {
+                // Search by name
+                services = serviceCatalogService.searchServicesByName(name.trim(), pageable);
+            } else {
+                // Search with other criteria
+                services = serviceCatalogService.searchServices(categoryId, serviceType, minPrice, maxPrice,
+                                                               minBandwidth, maxBandwidth, bandwidthAdjustable, pageable);
+            }
+
+            logger.info("Search returned {} services (page {} of {})",
+                       services.getNumberOfElements(), services.getNumber() + 1, services.getTotalPages());
+            return ResponseEntity.ok(services);
+
+        } catch (Exception e) {
+            logger.error("Error searching services", e);
+            throw new RuntimeException("Failed to search services", e);
         }
-        
-        logger.info("Search returned {} services (page {} of {})", 
-                   services.getNumberOfElements(), services.getNumber() + 1, services.getTotalPages());
-        return ResponseEntity.ok(services);
     }
 
     @Override
