@@ -215,6 +215,6 @@ public interface OrderRepository extends JpaRepository<Order, UUID> {
     /**
      * Find next order number sequence
      */
-    @Query("SELECT COALESCE(MAX(CAST(SUBSTRING(o.orderNumber, 5) AS integer)), 0) + 1 FROM Order o WHERE o.orderNumber LIKE 'ORD-%'")
+    @Query("SELECT COALESCE(COUNT(o), 0) + 1 FROM Order o")
     Integer findNextOrderSequence();
 }

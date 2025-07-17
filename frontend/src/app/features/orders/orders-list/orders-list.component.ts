@@ -444,32 +444,13 @@ export class OrdersListComponent implements OnInit {
       this.isLoading.set(true);
       this.error.set(null);
 
-      const searchParams: OrderSearchParams = {
-        page: this.currentPage(),
-        limit: this.pageSize
-      };
+      // Use the company orders endpoint
+      const response = await this.orderService.getCompanyOrders().toPromise();
 
-      // Add filters
-      if (this.selectedStatus) {
-        searchParams.status = this.selectedStatus as OrderStatus;
-      }
-      if (this.selectedType) {
-        searchParams.orderType = this.selectedType as OrderType;
-      }
-      if (this.startDate) {
-        searchParams.startDate = this.startDate;
-      }
-      if (this.endDate) {
-        searchParams.endDate = this.endDate;
-      }
-
-      const response = await this.orderService.searchOrders(searchParams).toPromise();
-
-      if (response && response.data) {
-        const orders = Array.isArray(response.data) ? response.data : [];
-        this.orders.set(orders);
-        this.totalOrders.set(response.pagination?.total || orders.length);
-        this.totalPages.set(response.pagination?.totalPages || 1);
+      if (response && Array.isArray(response)) {
+        this.orders.set(response);
+        this.totalOrders.set(response.length);
+        this.totalPages.set(1);
         this.updateVisiblePages();
       } else {
         this.orders.set([]);

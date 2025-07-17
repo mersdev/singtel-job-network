@@ -50,9 +50,9 @@ import { ServiceCatalogService, ServiceDetail } from '../../../core/api/service-
               class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-singtel-blue focus:border-transparent"
             >
               <option value="">Select a service</option>
-              <option value="mpls">MPLS Network Service</option>
-              <option value="internet">Internet Leased Line</option>
-              <option value="vpn">VPN Service</option>
+              @for (service of availableServices(); track service.id) {
+                <option [value]="service.id">{{ service.name }} - ${{ service.monthlyPrice }}/month</option>
+              }
             </select>
           </div>
         </div>
@@ -289,6 +289,7 @@ export class OrderCreationComponent implements OnInit {
   private serviceCatalogService = inject(ServiceCatalogService);
 
   selectedService = signal<ServiceDetail | null>(null);
+  availableServices = signal<ServiceDetail[]>([]);
   isSubmitting = signal(false);
   error = signal<string | null>(null);
 
@@ -315,6 +316,9 @@ export class OrderCreationComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    // Load available services
+    this.loadAvailableServices();
+
     // Check for service ID in query params
     this.route.queryParams.subscribe(params => {
       const serviceId = params['serviceId'];
@@ -322,6 +326,16 @@ export class OrderCreationComponent implements OnInit {
         this.loadService(serviceId);
       }
     });
+  }
+
+  private async loadAvailableServices(): Promise<void> {
+    try {
+      const services = await this.serviceCatalogService.getAllServices().toPromise();
+      this.availableServices.set(services || []);
+    } catch (error: any) {
+      console.error('Error loading services:', error);
+      this.error.set('Failed to load available services');
+    }
   }
 
   private async loadService(serviceId: string): Promise<void> {
@@ -382,37 +396,12 @@ export class OrderCreationComponent implements OnInit {
 
   onServiceSelect(event: Event): void {
     const target = event.target as HTMLSelectElement;
-    const serviceValue = target.value;
+    const serviceId = target.value;
 
-    // For testing purposes, create a mock service
-    if (serviceValue === 'mpls') {
-      const mockService: ServiceDetail = {
-        id: 'mock-mpls-id',
-        name: 'MPLS Network Service',
-        description: 'High-performance MPLS network connectivity',
-        categoryName: 'Connectivity',
-        serviceType: 'MPLS',
-        monthlyPrice: 500,
-        setupFee: 100,
-        isBandwidthAdjustable: true,
-        supportedBandwidths: [10, 50, 100, 500, 1000],
-        isAvailable: true,
-        provisioningTimeHours: 72,
-        contractTermMonths: 12,
-        basePriceMonthly: 500,
-        pricePerMbps: 5,
-        availableLocations: ['Singapore', 'Malaysia'],
-        baseBandwidthMbps: 10,
-        maxBandwidthMbps: 1000,
-        minBandwidthMbps: 10,
-        features: {},
-        technicalSpecs: {}
-      };
-      this.selectedService.set(mockService);
-
-      // Make bandwidth required for MPLS
-      this.orderForm.get('requestedBandwidthMbps')?.setValidators([Validators.required]);
-      this.orderForm.get('requestedBandwidthMbps')?.updateValueAndValidity();
+    if (serviceId) {
+      this.loadService(serviceId);
+    } else {
+      this.selectedService.set(null);
     }
   }
 

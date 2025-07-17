@@ -38,11 +38,16 @@ public class OrderController implements OrderApi {
     @Override
     public ResponseEntity<OrderResponse> createOrder(@Valid @RequestBody CreateOrderRequest request) {
         logger.info("Creating new order for service: {}", request.getServiceId());
-        
-        OrderResponse order = orderService.createOrder(request);
-        
-        logger.info("Order created successfully: {}", order.getOrderNumber());
-        return ResponseEntity.status(HttpStatus.CREATED).body(order);
+
+        try {
+            OrderResponse order = orderService.createOrder(request);
+
+            logger.info("Order created successfully: {}", order.getOrderNumber());
+            return ResponseEntity.status(HttpStatus.CREATED).body(order);
+        } catch (Exception e) {
+            logger.error("Error creating order: ", e);
+            throw e;
+        }
     }
 
     @Override

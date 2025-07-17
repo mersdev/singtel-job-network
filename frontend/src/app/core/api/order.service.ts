@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { map, retry, catchError } from 'rxjs/operators';
 import { HttpParams } from '@angular/common/http';
 import { BaseApiService, ApiResponse, PaginatedResponse } from './base-api.service';
 
@@ -133,8 +133,9 @@ export class OrderService extends BaseApiService {
    * Get all orders for current user's company
    */
   getCompanyOrders(): Observable<OrderResponse[]> {
-    return this.get<OrderResponse[]>('orders/company').pipe(
-      map(response => response.data)
+    return this.http.get<OrderResponse[]>(`${this.baseUrl}/orders`).pipe(
+      retry(1),
+      catchError(this.handleError)
     );
   }
 

@@ -46,10 +46,12 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     @Transactional(readOnly = true)
     public UserDetails loadUserById(String userId) throws UsernameNotFoundException {
         try {
-            User user = userRepository.findById(java.util.UUID.fromString(userId))
+            User user = userRepository.findByIdWithCompany(java.util.UUID.fromString(userId))
                     .orElseThrow(() -> new UsernameNotFoundException("User not found with id: " + userId));
 
-            logger.debug("User found by ID: {} with username: {}", userId, user.getUsername());
+            logger.debug("User found by ID: {} with username: {} and company: {}",
+                        userId, user.getUsername(),
+                        user.getCompany() != null ? user.getCompany().getName() : "null");
             return user;
         } catch (IllegalArgumentException e) {
             logger.error("Invalid UUID format: {}", userId);
